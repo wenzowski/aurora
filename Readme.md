@@ -36,35 +36,69 @@ https://www2.acom.ucar.edu/mopitt/products
 
 ## API Questions
 
-### Should we minimize transfer size or optimize for readability?
-Choice: n-tuple arrays vs nested objects
+### What types of queries does the api need to support?
+- Geo: Land masses are not rectangles. Shapes! One reading that contains a point?
+- Time: range?
+- Reading: specific spectroscopy band?
+- Satellite: only satellites in list?
 
 ## API Proposal
 
-### Return Format
+### Level 3 Call Format
 
-The API will always return a (latitude, longitude) pair which is represents the center of the reading.
-- lat: latitude of the top left corner of rectangular area
-- lon: longitude of the top left corner of rectangular area
+The API functions by posting JSON to an endpoint
+Geo queries are an array of [latitude, longitude] pairs.
+Dates are in ISO 8601 in UTC.
 
-```json
-[
-  {
-    "lat": 30.5,
-    "lon": 50.0,
-    "data": {
-      "co2": 50,
-      "ch4": 50
-    }
-  },
-  {
-    "lat": 31.5,
-    "lon": 50.0,
-    "data": {
-      "co2": 49,
-      "ch4": 51
-    }
-  }
-}
+```bash
+curl -X POST \
+  -H "x-api-key: $API_KEY" \
+  -H "Content-Type:application/json" \
+  -d '{"geo":[[-71.1043443253471,-42.3150676015829],[71.1043443253471,-42.3150676015829],[71.1043443253471,42.3150676015829],[-71.1043443253471,42.3150676015829],[-71.1043443253471,-42.3150676015829]],"from_time":"2016-08-23T17:23:05.070Z","to_time":"2016-08-23T17:23:05.070Z","reading":["CO2"],"satellite":["AIRS"]}' \
+  https://endpoint.example.com/skyapi
 ```
 
+### Level 3 Return Format
+
+- root response: array of reading time periods
+  - from_time: start of readings to average
+  - end_time: end of readings to average
+  - regions: an array of readings
+    - readings: an object keyed by the requested spectroscopy readings
+    - geo: a (latitude, longitude) pair which is represents the center of the reading.
+
+```json
+[{
+	"from_time": "2016-07-23T17:23:05.070Z",
+	"to_time": "2016-07-23T17:23:05.070Z",
+	"regions": [{
+		"geo": [-71.1043443253471, -42.3150676015829],
+		"readings": {
+			"CO2": 50,
+			"CH4": 50
+		}
+	}, {
+		"geo": [-71.1043443253471, -42.3150676015829],
+		"readings": {
+			"CO2": 49,
+			"CH4": 51
+		}
+	}]
+}, {
+	"from_time": "2016-08-23T17:23:05.070Z",
+	"to_time": "2016-08-23T17:23:05.070Z",
+	"regions": [{
+		"geo": [-71.1043443253471, -42.3150676015829],
+		"readings": {
+			"CO2": 50,
+			"CH4": 50
+		}
+	}, {
+		"geo": [-71.1043443253471, -42.3150676015829],
+		"readings": {
+			"CO2": 49,
+			"CH4": 51
+		}
+	}]
+}]
+```
