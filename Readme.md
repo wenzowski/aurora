@@ -8,6 +8,7 @@
 
 ### Which L3 datasets on Mirador are useful for high resolution ghg info?
 [MIRADOR API](http://mirador.gsfc.nasa.gov/cgi-bin/mirador/servcoll.pl?helpmenuclass=inventory&SearchButton=Search%20GES-DISC)
+[example access form](http://acdisc.gesdisc.eosdis.nasa.gov/opendap/Aqua_AIRS_Level3/AIRX3C2M.005/2012/AIRS.2012.02.01.L3.CO2Std029.v5.9.14.0.X12089140931.hdf.html)
 
 ### Which L3 datasets do we need to request that would be useful?
 [Copernicus](https://co2.jpl.nasa.gov/)?
@@ -19,6 +20,15 @@
 - sulfur hexafluoride (SF6)
 - hydrofluorocarbons (HFCs)
 - perfluorocarbons (PFCs)
+
+### What is the format of the Mirador ASCII dump?
+
+### How do we get NASA credentials?
+[NASA Data Cookbook](http://disc.sci.gsfc.nasa.gov/recipes/?q=recipe-cookbook)
+
+### Can we download data automatically?
+Use wget for bulk downloads?
+Pretend to be a real user with [nightmarejs](http://www.nightmarejs.org/)?
 
 MOPITT
 https://www2.acom.ucar.edu/mopitt/publications
