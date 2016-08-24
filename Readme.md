@@ -15,11 +15,21 @@
 
 ### Which interationally accepted anthropogenic greenhouse gases?
 - carbon dioxide (CO2)
-- methane (CH4)
+http://acdisc.gsfc.nasa.gov/data/Aqua_AIRS_Level3/AIRS3C28.005/2016/ 2.5 x 2 deg
+http://acdisc.gsfc.nasa.gov/data/Aqua_AIRS_Level3/AIRS3C2D.005/2016/ 2.5 x 2 deg
+http://acdisc.gsfc.nasa.gov/data/Aqua_AIRS_Level3/AIRS3C2M.005/2016/ 2.5 x 2 deg
+- methane (CH4) - Not on Mirador
 - nitrous oxide (N2O)
-- sulfur hexafluoride (SF6)
-- hydrofluorocarbons (HFCs)
-- perfluorocarbons (PFCs)
+http://measures.gesdisc.eosdis.nasa.gov/data/GOZCARDS/GozMmlpN2O.1/ 10 deg zonal
+http://measures.gesdisc.eosdis.nasa.gov/data/GOZCARDS/GxozSmlpN2O.1/ 10 deg zonal
+http://acdisc.gesdisc.eosdis.nasa.gov/data/Aura_HIRDLS_Level3/H3ZFCN2O.007/ 1 deg lat zonal
+- sulfur hexafluoride (SF6) - Not on Mirador
+- hydrofluorocarbons (HFCs) - Not on Mirador
+- perfluorocarbons (PFCs) - Not on Mirador
+
+The data on Ceres is very updated
+http://terra.nasa.gov/data/ceres-data
+
 
 ### What is the format of the Mirador ASCII dump?
 
