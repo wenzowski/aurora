@@ -112,3 +112,9 @@ curl -X POST \
 	}]
 }]
 ```
+
+## Testing
+
+```bash
+pytest tests/*.py
+```
