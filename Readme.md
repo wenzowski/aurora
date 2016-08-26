@@ -13,7 +13,7 @@
 ### Which L3 datasets do we need to request that would be useful?
 [Copernicus](https://co2.jpl.nasa.gov/)?
 
-### Which interationally accepted anthropogenic greenhouse gases?
+### Which internationally accepted anthropogenic greenhouse gases?
 - carbon dioxide (CO2)
 http://acdisc.gsfc.nasa.gov/data/Aqua_AIRS_Level3/AIRS3C28.005/2016/ 2.5 x 2 deg
 http://acdisc.gsfc.nasa.gov/data/Aqua_AIRS_Level3/AIRS3C2D.005/2016/ 2.5 x 2 deg
