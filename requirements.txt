@@ -1,3 +1,5 @@
+git+https://github.com/HDFGroup/h5pyd.git
+requests==2.11.1
 h5preserve==0.8
 h5py==2.6.0
 numpy==1.11.1
