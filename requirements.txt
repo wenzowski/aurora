@@ -1,9 +1,4 @@
-h5json==1.0.2
+h5preserve==0.8
 h5py==2.6.0
 numpy==1.11.1
-pbr==1.10.0
 six==1.10.0
-stevedore==1.17.1
-virtualenv==15.0.3
-virtualenv-clone==0.2.6
-virtualenvwrapper==4.7.2
