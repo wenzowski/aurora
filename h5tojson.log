@@ -1,0 +1,1439 @@
+h5tojson data/HIRDLS-Aura_L3ZFCN2O_v07-00-20-c02_2005d022-2008d077.he5
+Using dbFile: /tmp/tmpRRkkLb
+init -- filePath: data/HIRDLS-Aura_L3ZFCN2O_v07-00-20-c02_2005d022-2008d077.he5 mode: r
+dbFilePath: /tmp/tmpRRkkLb mode: r+
+Hdf5db __enter
+initializing file
+visit: HDFEOS name: Group
+visit: HDFEOS/ADDITIONAL name: Group
+visit: HDFEOS/ADDITIONAL/FILE_ATTRIBUTES name: Group
+visit: HDFEOS/ZAS name: Group
+visit: HDFEOS/ZAS/HIRDLS name: Group
+visit: HDFEOS/ZAS/HIRDLS/Data Fields name: Group
+visit: HDFEOS/ZAS/HIRDLS/Data Fields/Day name: Dataset
+visit: HDFEOS/ZAS/HIRDLS/Data Fields/Latitude name: Dataset
+visit: HDFEOS/ZAS/HIRDLS/Data Fields/LocalSolarTimeAscending name: Dataset
+visit: HDFEOS/ZAS/HIRDLS/Data Fields/LocalSolarTimeDescending name: Dataset
+visit: HDFEOS/ZAS/HIRDLS/Data Fields/Month name: Dataset
+visit: HDFEOS/ZAS/HIRDLS/Data Fields/N2OAscending name: Dataset
+visit: HDFEOS/ZAS/HIRDLS/Data Fields/N2OAscendingCovariance name: Dataset
+visit: HDFEOS/ZAS/HIRDLS/Data Fields/N2OAscendingDataCount name: Dataset
+visit: HDFEOS/ZAS/HIRDLS/Data Fields/N2OAscendingPrecision name: Dataset
+visit: HDFEOS/ZAS/HIRDLS/Data Fields/N2OCombined name: Dataset
+visit: HDFEOS/ZAS/HIRDLS/Data Fields/N2OCombinedCovariance name: Dataset
+visit: HDFEOS/ZAS/HIRDLS/Data Fields/N2OCombinedDataCount name: Dataset
+visit: HDFEOS/ZAS/HIRDLS/Data Fields/N2OCombinedPrecision name: Dataset
+visit: HDFEOS/ZAS/HIRDLS/Data Fields/N2ODescending name: Dataset
+visit: HDFEOS/ZAS/HIRDLS/Data Fields/N2ODescendingCovariance name: Dataset
+visit: HDFEOS/ZAS/HIRDLS/Data Fields/N2ODescendingDataCount name: Dataset
+visit: HDFEOS/ZAS/HIRDLS/Data Fields/N2ODescendingPrecision name: Dataset
+visit: HDFEOS/ZAS/HIRDLS/Data Fields/Pressure name: Dataset
+visit: HDFEOS/ZAS/HIRDLS/Data Fields/SolarZenithAngleAscending name: Dataset
+visit: HDFEOS/ZAS/HIRDLS/Data Fields/SolarZenithAngleDescending name: Dataset
+visit: HDFEOS/ZAS/HIRDLS/Data Fields/Time name: Dataset
+visit: HDFEOS/ZAS/HIRDLS/Data Fields/Year name: Dataset
+visit: HDFEOS/ZAS/HIRDLS/nCoeffs name: Dataset
+visit: HDFEOS/ZAS/HIRDLS/nLats name: Dataset
+visit: HDFEOS/ZAS/HIRDLS/nLevels name: Dataset
+visit: HDFEOS/ZAS/HIRDLS/nTimes name: Dataset
+visit: HDFEOS INFORMATION name: Group
+visit: HDFEOS INFORMATION/StructMetadata.0 name: Dataset
+visit: HDFEOS INFORMATION/coremetadata.0 name: Dataset
+getUUIDByPath: [/]
+getGroupObjByUuid(984443b6-6a36-11e6-a230-04016789eb01)
+dumpGroup alias: [/]
+db.getAttributeItems(984443b6-6a36-11e6-a230-04016789eb01)
+dumpAttributes: 984443b6-6a36-11e6-a230-04016789eb01
+db.getLinkItems(984443b6-6a36-11e6-a230-04016789eb01)
+getGroupObjByUuid(984443b6-6a36-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(984443b6-6a36-11e6-a230-04016789eb01, [HDFEOS])
+getGroupObjByUuid(984443b6-6a36-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(984443b6-6a36-11e6-a230-04016789eb01, [HDFEOS INFORMATION])
+getGroupObjByUuid(984443b6-6a36-11e6-a230-04016789eb01)
+db.getCollection(groups)
+getGroupObjByUuid(984443b7-6a36-11e6-a230-04016789eb01)
+dumpGroup alias: [/HDFEOS]
+db.getAttributeItems(984443b7-6a36-11e6-a230-04016789eb01)
+dumpAttributes: 984443b7-6a36-11e6-a230-04016789eb01
+db.getLinkItems(984443b7-6a36-11e6-a230-04016789eb01)
+getGroupObjByUuid(984443b7-6a36-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(984443b7-6a36-11e6-a230-04016789eb01, [ADDITIONAL])
+getGroupObjByUuid(984443b7-6a36-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(984443b7-6a36-11e6-a230-04016789eb01, [ZAS])
+getGroupObjByUuid(984443b7-6a36-11e6-a230-04016789eb01)
+getGroupObjByUuid(984443b8-6a36-11e6-a230-04016789eb01)
+dumpGroup alias: [/HDFEOS/ADDITIONAL]
+db.getAttributeItems(984443b8-6a36-11e6-a230-04016789eb01)
+dumpAttributes: 984443b8-6a36-11e6-a230-04016789eb01
+db.getLinkItems(984443b8-6a36-11e6-a230-04016789eb01)
+getGroupObjByUuid(984443b8-6a36-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(984443b8-6a36-11e6-a230-04016789eb01, [FILE_ATTRIBUTES])
+getGroupObjByUuid(984443b8-6a36-11e6-a230-04016789eb01)
+getGroupObjByUuid(984443b9-6a36-11e6-a230-04016789eb01)
+dumpGroup alias: [/HDFEOS/ADDITIONAL/FILE_ATTRIBUTES]
+db.getAttributeItems(984443b9-6a36-11e6-a230-04016789eb01)
+dumpAttributes: 984443b9-6a36-11e6-a230-04016789eb01
+dumpAttribute: [InstrumentName]
+getAttributeItemByUuid(groups, 984443b9-6a36-11e6-a230-04016789eb01, InstrumentName)
+dumpAttribute: [ProcessLevel]
+getAttributeItemByUuid(groups, 984443b9-6a36-11e6-a230-04016789eb01, ProcessLevel)
+dumpAttribute: [PGEVersion]
+getAttributeItemByUuid(groups, 984443b9-6a36-11e6-a230-04016789eb01, PGEVersion)
+dumpAttribute: [HIRDLSFileType]
+getAttributeItemByUuid(groups, 984443b9-6a36-11e6-a230-04016789eb01, HIRDLSFileType)
+dumpAttribute: [Period]
+getAttributeItemByUuid(groups, 984443b9-6a36-11e6-a230-04016789eb01, Period)
+dumpAttribute: [identifier_product_doi]
+getAttributeItemByUuid(groups, 984443b9-6a36-11e6-a230-04016789eb01, identifier_product_doi)
+db.getLinkItems(984443b9-6a36-11e6-a230-04016789eb01)
+getGroupObjByUuid(984443b9-6a36-11e6-a230-04016789eb01)
+getGroupObjByUuid(984443ba-6a36-11e6-a230-04016789eb01)
+dumpGroup alias: [/HDFEOS/ZAS]
+db.getAttributeItems(984443ba-6a36-11e6-a230-04016789eb01)
+dumpAttributes: 984443ba-6a36-11e6-a230-04016789eb01
+db.getLinkItems(984443ba-6a36-11e6-a230-04016789eb01)
+getGroupObjByUuid(984443ba-6a36-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(984443ba-6a36-11e6-a230-04016789eb01, [HIRDLS])
+getGroupObjByUuid(984443ba-6a36-11e6-a230-04016789eb01)
+getGroupObjByUuid(984443bb-6a36-11e6-a230-04016789eb01)
+dumpGroup alias: [/HDFEOS/ZAS/HIRDLS]
+db.getAttributeItems(984443bb-6a36-11e6-a230-04016789eb01)
+dumpAttributes: 984443bb-6a36-11e6-a230-04016789eb01
+dumpAttribute: [VerticalCoordinate]
+getAttributeItemByUuid(groups, 984443bb-6a36-11e6-a230-04016789eb01, VerticalCoordinate)
+dumpAttribute: [Pressure]
+getAttributeItemByUuid(groups, 984443bb-6a36-11e6-a230-04016789eb01, Pressure)
+db.getLinkItems(984443bb-6a36-11e6-a230-04016789eb01)
+getGroupObjByUuid(984443bb-6a36-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(984443bb-6a36-11e6-a230-04016789eb01, [Data Fields])
+getGroupObjByUuid(984443bb-6a36-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(984443bb-6a36-11e6-a230-04016789eb01, [nCoeffs])
+getGroupObjByUuid(984443bb-6a36-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(984443bb-6a36-11e6-a230-04016789eb01, [nLats])
+getGroupObjByUuid(984443bb-6a36-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(984443bb-6a36-11e6-a230-04016789eb01, [nLevels])
+getGroupObjByUuid(984443bb-6a36-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(984443bb-6a36-11e6-a230-04016789eb01, [nTimes])
+getGroupObjByUuid(984443bb-6a36-11e6-a230-04016789eb01)
+getGroupObjByUuid(984443bc-6a36-11e6-a230-04016789eb01)
+dumpGroup alias: [/HDFEOS/ZAS/HIRDLS/Data Fields]
+db.getAttributeItems(984443bc-6a36-11e6-a230-04016789eb01)
+dumpAttributes: 984443bc-6a36-11e6-a230-04016789eb01
+db.getLinkItems(984443bc-6a36-11e6-a230-04016789eb01)
+getGroupObjByUuid(984443bc-6a36-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(984443bc-6a36-11e6-a230-04016789eb01, [Day])
+getGroupObjByUuid(984443bc-6a36-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(984443bc-6a36-11e6-a230-04016789eb01, [Latitude])
+getGroupObjByUuid(984443bc-6a36-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(984443bc-6a36-11e6-a230-04016789eb01, [LocalSolarTimeAscending])
+getGroupObjByUuid(984443bc-6a36-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(984443bc-6a36-11e6-a230-04016789eb01, [LocalSolarTimeDescending])
+getGroupObjByUuid(984443bc-6a36-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(984443bc-6a36-11e6-a230-04016789eb01, [Month])
+getGroupObjByUuid(984443bc-6a36-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(984443bc-6a36-11e6-a230-04016789eb01, [N2OAscending])
+getGroupObjByUuid(984443bc-6a36-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(984443bc-6a36-11e6-a230-04016789eb01, [N2OAscendingCovariance])
+getGroupObjByUuid(984443bc-6a36-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(984443bc-6a36-11e6-a230-04016789eb01, [N2OAscendingDataCount])
+getGroupObjByUuid(984443bc-6a36-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(984443bc-6a36-11e6-a230-04016789eb01, [N2OAscendingPrecision])
+getGroupObjByUuid(984443bc-6a36-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(984443bc-6a36-11e6-a230-04016789eb01, [N2OCombined])
+getGroupObjByUuid(984443bc-6a36-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(984443bc-6a36-11e6-a230-04016789eb01, [N2OCombinedCovariance])
+getGroupObjByUuid(984443bc-6a36-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(984443bc-6a36-11e6-a230-04016789eb01, [N2OCombinedDataCount])
+getGroupObjByUuid(984443bc-6a36-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(984443bc-6a36-11e6-a230-04016789eb01, [N2OCombinedPrecision])
+getGroupObjByUuid(984443bc-6a36-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(984443bc-6a36-11e6-a230-04016789eb01, [N2ODescending])
+getGroupObjByUuid(984443bc-6a36-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(984443bc-6a36-11e6-a230-04016789eb01, [N2ODescendingCovariance])
+getGroupObjByUuid(984443bc-6a36-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(984443bc-6a36-11e6-a230-04016789eb01, [N2ODescendingDataCount])
+getGroupObjByUuid(984443bc-6a36-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(984443bc-6a36-11e6-a230-04016789eb01, [N2ODescendingPrecision])
+getGroupObjByUuid(984443bc-6a36-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(984443bc-6a36-11e6-a230-04016789eb01, [Pressure])
+getGroupObjByUuid(984443bc-6a36-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(984443bc-6a36-11e6-a230-04016789eb01, [SolarZenithAngleAscending])
+getGroupObjByUuid(984443bc-6a36-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(984443bc-6a36-11e6-a230-04016789eb01, [SolarZenithAngleDescending])
+getGroupObjByUuid(984443bc-6a36-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(984443bc-6a36-11e6-a230-04016789eb01, [Time])
+getGroupObjByUuid(984443bc-6a36-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(984443bc-6a36-11e6-a230-04016789eb01, [Year])
+getGroupObjByUuid(984443bc-6a36-11e6-a230-04016789eb01)
+getGroupObjByUuid(984443d7-6a36-11e6-a230-04016789eb01)
+dumpGroup alias: [/HDFEOS INFORMATION]
+db.getAttributeItems(984443d7-6a36-11e6-a230-04016789eb01)
+dumpAttributes: 984443d7-6a36-11e6-a230-04016789eb01
+dumpAttribute: [HDFEOSVersion]
+getAttributeItemByUuid(groups, 984443d7-6a36-11e6-a230-04016789eb01, HDFEOSVersion)
+db.getLinkItems(984443d7-6a36-11e6-a230-04016789eb01)
+getGroupObjByUuid(984443d7-6a36-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(984443d7-6a36-11e6-a230-04016789eb01, [StructMetadata.0])
+getGroupObjByUuid(984443d7-6a36-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(984443d7-6a36-11e6-a230-04016789eb01, [coremetadata.0])
+getGroupObjByUuid(984443d7-6a36-11e6-a230-04016789eb01)
+db.getCollection(datasets)
+dumpDataset: 984443bd-6a36-11e6-a230-04016789eb01
+getDatasetObjByUuid(984443bd-6a36-11e6-a230-04016789eb01)
+getDatasetObjByUuid(984443bd-6a36-11e6-a230-04016789eb01)
+dumpDataset alias: [/HDFEOS/ZAS/HIRDLS/Data Fields/Day]
+db.getAttributeItems(984443bd-6a36-11e6-a230-04016789eb01)
+dumpAttributes: 984443bd-6a36-11e6-a230-04016789eb01
+dumpAttribute: [_FillValue]
+getAttributeItemByUuid(datasets, 984443bd-6a36-11e6-a230-04016789eb01, _FillValue)
+dumpAttribute: [MissingValue]
+getAttributeItemByUuid(datasets, 984443bd-6a36-11e6-a230-04016789eb01, MissingValue)
+dumpAttribute: [Title]
+getAttributeItemByUuid(datasets, 984443bd-6a36-11e6-a230-04016789eb01, Title)
+dumpAttribute: [Units]
+getAttributeItemByUuid(datasets, 984443bd-6a36-11e6-a230-04016789eb01, Units)
+dumpAttribute: [UniqueFieldDefinition]
+getAttributeItemByUuid(datasets, 984443bd-6a36-11e6-a230-04016789eb01, UniqueFieldDefinition)
+dumpAttribute: [DIMENSION_LIST]
+getAttributeItemByUuid(datasets, 984443bd-6a36-11e6-a230-04016789eb01, DIMENSION_LIST)
+getGroupObjByUuid(984443d6-6a36-11e6-a230-04016789eb01)
+getDatasetObjByUuid(984443d6-6a36-11e6-a230-04016789eb01)
+getDatasetObjByUuid(984443bd-6a36-11e6-a230-04016789eb01)
+dumpDataset: 984443be-6a36-11e6-a230-04016789eb01
+getDatasetObjByUuid(984443be-6a36-11e6-a230-04016789eb01)
+getDatasetObjByUuid(984443be-6a36-11e6-a230-04016789eb01)
+dumpDataset alias: [/HDFEOS/ZAS/HIRDLS/Data Fields/Latitude]
+db.getAttributeItems(984443be-6a36-11e6-a230-04016789eb01)
+dumpAttributes: 984443be-6a36-11e6-a230-04016789eb01
+dumpAttribute: [_FillValue]
+getAttributeItemByUuid(datasets, 984443be-6a36-11e6-a230-04016789eb01, _FillValue)
+dumpAttribute: [MissingValue]
+getAttributeItemByUuid(datasets, 984443be-6a36-11e6-a230-04016789eb01, MissingValue)
+dumpAttribute: [Title]
+getAttributeItemByUuid(datasets, 984443be-6a36-11e6-a230-04016789eb01, Title)
+dumpAttribute: [Units]
+getAttributeItemByUuid(datasets, 984443be-6a36-11e6-a230-04016789eb01, Units)
+dumpAttribute: [UniqueFieldDefinition]
+getAttributeItemByUuid(datasets, 984443be-6a36-11e6-a230-04016789eb01, UniqueFieldDefinition)
+dumpAttribute: [DIMENSION_LIST]
+getAttributeItemByUuid(datasets, 984443be-6a36-11e6-a230-04016789eb01, DIMENSION_LIST)
+getGroupObjByUuid(984443d4-6a36-11e6-a230-04016789eb01)
+getDatasetObjByUuid(984443d4-6a36-11e6-a230-04016789eb01)
+getDatasetObjByUuid(984443be-6a36-11e6-a230-04016789eb01)
+dumpDataset: 984443bf-6a36-11e6-a230-04016789eb01
+getDatasetObjByUuid(984443bf-6a36-11e6-a230-04016789eb01)
+getDatasetObjByUuid(984443bf-6a36-11e6-a230-04016789eb01)
+dumpDataset alias: [/HDFEOS/ZAS/HIRDLS/Data Fields/LocalSolarTimeAscending]
+db.getAttributeItems(984443bf-6a36-11e6-a230-04016789eb01)
+dumpAttributes: 984443bf-6a36-11e6-a230-04016789eb01
+dumpAttribute: [_FillValue]
+getAttributeItemByUuid(datasets, 984443bf-6a36-11e6-a230-04016789eb01, _FillValue)
+dumpAttribute: [MissingValue]
+getAttributeItemByUuid(datasets, 984443bf-6a36-11e6-a230-04016789eb01, MissingValue)
+dumpAttribute: [Title]
+getAttributeItemByUuid(datasets, 984443bf-6a36-11e6-a230-04016789eb01, Title)
+dumpAttribute: [Units]
+getAttributeItemByUuid(datasets, 984443bf-6a36-11e6-a230-04016789eb01, Units)
+dumpAttribute: [UniqueFieldDefinition]
+getAttributeItemByUuid(datasets, 984443bf-6a36-11e6-a230-04016789eb01, UniqueFieldDefinition)
+dumpAttribute: [DIMENSION_LIST]
+getAttributeItemByUuid(datasets, 984443bf-6a36-11e6-a230-04016789eb01, DIMENSION_LIST)
+getGroupObjByUuid(984443d6-6a36-11e6-a230-04016789eb01)
+getDatasetObjByUuid(984443d6-6a36-11e6-a230-04016789eb01)
+getGroupObjByUuid(984443d4-6a36-11e6-a230-04016789eb01)
+getDatasetObjByUuid(984443d4-6a36-11e6-a230-04016789eb01)
+getDatasetObjByUuid(984443bf-6a36-11e6-a230-04016789eb01)
+dumpDataset: 984443c0-6a36-11e6-a230-04016789eb01
+getDatasetObjByUuid(984443c0-6a36-11e6-a230-04016789eb01)
+getDatasetObjByUuid(984443c0-6a36-11e6-a230-04016789eb01)
+dumpDataset alias: [/HDFEOS/ZAS/HIRDLS/Data Fields/LocalSolarTimeDescending]
+db.getAttributeItems(984443c0-6a36-11e6-a230-04016789eb01)
+dumpAttributes: 984443c0-6a36-11e6-a230-04016789eb01
+dumpAttribute: [DIMENSION_LIST]
+getAttributeItemByUuid(datasets, 984443c0-6a36-11e6-a230-04016789eb01, DIMENSION_LIST)
+getGroupObjByUuid(984443d6-6a36-11e6-a230-04016789eb01)
+getDatasetObjByUuid(984443d6-6a36-11e6-a230-04016789eb01)
+getGroupObjByUuid(984443d4-6a36-11e6-a230-04016789eb01)
+getDatasetObjByUuid(984443d4-6a36-11e6-a230-04016789eb01)
+dumpAttribute: [_FillValue]
+getAttributeItemByUuid(datasets, 984443c0-6a36-11e6-a230-04016789eb01, _FillValue)
+dumpAttribute: [MissingValue]
+getAttributeItemByUuid(datasets, 984443c0-6a36-11e6-a230-04016789eb01, MissingValue)
+dumpAttribute: [Title]
+getAttributeItemByUuid(datasets, 984443c0-6a36-11e6-a230-04016789eb01, Title)
+dumpAttribute: [Units]
+getAttributeItemByUuid(datasets, 984443c0-6a36-11e6-a230-04016789eb01, Units)
+dumpAttribute: [UniqueFieldDefinition]
+getAttributeItemByUuid(datasets, 984443c0-6a36-11e6-a230-04016789eb01, UniqueFieldDefinition)
+getDatasetObjByUuid(984443c0-6a36-11e6-a230-04016789eb01)
+dumpDataset: 984443c1-6a36-11e6-a230-04016789eb01
+getDatasetObjByUuid(984443c1-6a36-11e6-a230-04016789eb01)
+getDatasetObjByUuid(984443c1-6a36-11e6-a230-04016789eb01)
+dumpDataset alias: [/HDFEOS/ZAS/HIRDLS/Data Fields/Month]
+db.getAttributeItems(984443c1-6a36-11e6-a230-04016789eb01)
+dumpAttributes: 984443c1-6a36-11e6-a230-04016789eb01
+dumpAttribute: [_FillValue]
+getAttributeItemByUuid(datasets, 984443c1-6a36-11e6-a230-04016789eb01, _FillValue)
+dumpAttribute: [MissingValue]
+getAttributeItemByUuid(datasets, 984443c1-6a36-11e6-a230-04016789eb01, MissingValue)
+dumpAttribute: [Title]
+getAttributeItemByUuid(datasets, 984443c1-6a36-11e6-a230-04016789eb01, Title)
+dumpAttribute: [Units]
+getAttributeItemByUuid(datasets, 984443c1-6a36-11e6-a230-04016789eb01, Units)
+dumpAttribute: [UniqueFieldDefinition]
+getAttributeItemByUuid(datasets, 984443c1-6a36-11e6-a230-04016789eb01, UniqueFieldDefinition)
+dumpAttribute: [DIMENSION_LIST]
+getAttributeItemByUuid(datasets, 984443c1-6a36-11e6-a230-04016789eb01, DIMENSION_LIST)
+getGroupObjByUuid(984443d6-6a36-11e6-a230-04016789eb01)
+getDatasetObjByUuid(984443d6-6a36-11e6-a230-04016789eb01)
+getDatasetObjByUuid(984443c1-6a36-11e6-a230-04016789eb01)
+dumpDataset: 984443c2-6a36-11e6-a230-04016789eb01
+getDatasetObjByUuid(984443c2-6a36-11e6-a230-04016789eb01)
+getDatasetObjByUuid(984443c2-6a36-11e6-a230-04016789eb01)
+dumpDataset alias: [/HDFEOS/ZAS/HIRDLS/Data Fields/N2OAscending]
+db.getAttributeItems(984443c2-6a36-11e6-a230-04016789eb01)
+dumpAttributes: 984443c2-6a36-11e6-a230-04016789eb01
+dumpAttribute: [_FillValue]
+getAttributeItemByUuid(datasets, 984443c2-6a36-11e6-a230-04016789eb01, _FillValue)
+dumpAttribute: [MissingValue]
+getAttributeItemByUuid(datasets, 984443c2-6a36-11e6-a230-04016789eb01, MissingValue)
+dumpAttribute: [Title]
+getAttributeItemByUuid(datasets, 984443c2-6a36-11e6-a230-04016789eb01, Title)
+dumpAttribute: [Units]
+getAttributeItemByUuid(datasets, 984443c2-6a36-11e6-a230-04016789eb01, Units)
+dumpAttribute: [UniqueFieldDefinition]
+getAttributeItemByUuid(datasets, 984443c2-6a36-11e6-a230-04016789eb01, UniqueFieldDefinition)
+dumpAttribute: [DIMENSION_LIST]
+getAttributeItemByUuid(datasets, 984443c2-6a36-11e6-a230-04016789eb01, DIMENSION_LIST)
+getGroupObjByUuid(984443d6-6a36-11e6-a230-04016789eb01)
+getDatasetObjByUuid(984443d6-6a36-11e6-a230-04016789eb01)
+getGroupObjByUuid(984443d5-6a36-11e6-a230-04016789eb01)
+getDatasetObjByUuid(984443d5-6a36-11e6-a230-04016789eb01)
+getGroupObjByUuid(984443d4-6a36-11e6-a230-04016789eb01)
+getDatasetObjByUuid(984443d4-6a36-11e6-a230-04016789eb01)
+getGroupObjByUuid(984443d3-6a36-11e6-a230-04016789eb01)
+getDatasetObjByUuid(984443d3-6a36-11e6-a230-04016789eb01)
+getDatasetObjByUuid(984443c2-6a36-11e6-a230-04016789eb01)
+Hdf5db __exit
+h5tojson data/AIRS.2016.05.01.L3.CO2Std_IR031.v5.9.14.0.IRonly.X16165113849.hdf
+Using dbFile: /tmp/tmpLRg_b4
+h5tojson data/AIRS.2016.05.01.L3.CO2Std_IR031.v5.9.14.0.IRonly.X16165113849.hdf
+Using dbFile: /tmp/tmpyhI0Vu
+h5tojson data/AIRS.2016.05.01.L3.CO2Std_IR031.v5.9.14.0.IRonly.X16165113849.he5
+Using dbFile: /tmp/tmppmy76m
+init -- filePath: data/AIRS.2016.05.01.L3.CO2Std_IR031.v5.9.14.0.IRonly.X16165113849.he5 mode: r
+dbFilePath: /tmp/tmppmy76m mode: r+
+Hdf5db __enter
+initializing file
+visit: CO2 name: Group
+visit: CO2/Data Fields name: Group
+visit: CO2/Data Fields/Latitude name: Dataset
+visit: CO2/Data Fields/Longitude name: Dataset
+visit: CO2/Data Fields/mole_fraction_of_carbon_dioxide_in_free_troposphere name: Dataset
+visit: CO2/Data Fields/mole_fraction_of_carbon_dioxide_in_free_troposphere_count name: Dataset
+visit: CO2/Data Fields/mole_fraction_of_carbon_dioxide_in_free_troposphere_sdev name: Dataset
+visit: CO2/Grid Attributes name: Group
+visit: CO2/Grid Attributes/Day name: Dataset
+visit: CO2/Grid Attributes/Day_t name: Datatype
+visit: CO2/Grid Attributes/Month name: Dataset
+visit: CO2/Grid Attributes/Month_t name: Datatype
+visit: CO2/Grid Attributes/NumDays name: Dataset
+visit: CO2/Grid Attributes/NumDays_t name: Datatype
+visit: CO2/Grid Attributes/PresLvls name: Dataset
+visit: CO2/Grid Attributes/PresLvls_t name: Datatype
+visit: CO2/Grid Attributes/PresLyrs name: Dataset
+visit: CO2/Grid Attributes/PresLyrs_t name: Datatype
+visit: CO2/Grid Attributes/Year name: Dataset
+visit: CO2/Grid Attributes/Year_t name: Datatype
+visit: CO2/Grid Attributes/_FV_Latitude name: Dataset
+visit: CO2/Grid Attributes/_FV_Latitude_t name: Datatype
+visit: CO2/Grid Attributes/_FV_Longitude name: Dataset
+visit: CO2/Grid Attributes/_FV_Longitude_t name: Datatype
+visit: CO2/Grid Attributes/_FV_mole_fraction_of_carbon_dioxide_in_free_troposphere name: Dataset
+visit: CO2/Grid Attributes/_FV_mole_fraction_of_carbon_dioxide_in_free_troposphere_count name: Dataset
+visit: CO2/Grid Attributes/_FV_mole_fraction_of_carbon_dioxide_in_free_troposphere_count_t name: Datatype
+visit: CO2/Grid Attributes/_FV_mole_fraction_of_carbon_dioxide_in_free_troposphere_sdev name: Dataset
+visit: CO2/Grid Attributes/_FV_mole_fraction_of_carbon_dioxide_in_free_troposphere_sdev_t name: Datatype
+visit: CO2/Grid Attributes/_FV_mole_fraction_of_carbon_dioxide_in_free_troposphere_t name: Datatype
+visit: HDF4_DIMGROUP name: Group
+getUUIDByPath: [/]
+getGroupObjByUuid(5c197ee4-6a39-11e6-a230-04016789eb01)
+dumpGroup alias: [/]
+db.getAttributeItems(5c197ee4-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 5c197ee4-6a39-11e6-a230-04016789eb01
+dumpAttribute: [HDFEOSVersion_GLOSDS]
+getAttributeItemByUuid(groups, 5c197ee4-6a39-11e6-a230-04016789eb01, HDFEOSVersion_GLOSDS)
+dumpAttribute: [StructMetadata.0_GLOSDS]
+getAttributeItemByUuid(groups, 5c197ee4-6a39-11e6-a230-04016789eb01, StructMetadata.0_GLOSDS)
+dumpAttribute: [coremetadata_GLOSDS_001]
+getAttributeItemByUuid(groups, 5c197ee4-6a39-11e6-a230-04016789eb01, coremetadata_GLOSDS_001)
+dumpAttribute: [coremetadata_GLOSDS_002]
+getAttributeItemByUuid(groups, 5c197ee4-6a39-11e6-a230-04016789eb01, coremetadata_GLOSDS_002)
+dumpAttribute: [coremetadata.1_GLOSDS_001]
+getAttributeItemByUuid(groups, 5c197ee4-6a39-11e6-a230-04016789eb01, coremetadata.1_GLOSDS_001)
+dumpAttribute: [coremetadata.1_GLOSDS_002]
+getAttributeItemByUuid(groups, 5c197ee4-6a39-11e6-a230-04016789eb01, coremetadata.1_GLOSDS_002)
+dumpAttribute: [coremetadata.2_GLOSDS]
+getAttributeItemByUuid(groups, 5c197ee4-6a39-11e6-a230-04016789eb01, coremetadata.2_GLOSDS)
+db.getLinkItems(5c197ee4-6a39-11e6-a230-04016789eb01)
+getGroupObjByUuid(5c197ee4-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(5c197ee4-6a39-11e6-a230-04016789eb01, [CO2])
+getGroupObjByUuid(5c197ee4-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(5c197ee4-6a39-11e6-a230-04016789eb01, [HDF4_DIMGROUP])
+getGroupObjByUuid(5c197ee4-6a39-11e6-a230-04016789eb01)
+db.getCollection(groups)
+getGroupObjByUuid(5c197ee5-6a39-11e6-a230-04016789eb01)
+dumpGroup alias: [/CO2]
+db.getAttributeItems(5c197ee5-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 5c197ee5-6a39-11e6-a230-04016789eb01
+dumpAttribute: [HDF4_OBJECT_TYPE]
+getAttributeItemByUuid(groups, 5c197ee5-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_TYPE)
+dumpAttribute: [HDF4_OBJECT_NAME]
+getAttributeItemByUuid(groups, 5c197ee5-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_NAME)
+dumpAttribute: [HDF4_REF_NUM]
+getAttributeItemByUuid(groups, 5c197ee5-6a39-11e6-a230-04016789eb01, HDF4_REF_NUM)
+db.getLinkItems(5c197ee5-6a39-11e6-a230-04016789eb01)
+getGroupObjByUuid(5c197ee5-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(5c197ee5-6a39-11e6-a230-04016789eb01, [Data Fields])
+getGroupObjByUuid(5c197ee5-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(5c197ee5-6a39-11e6-a230-04016789eb01, [Grid Attributes])
+getGroupObjByUuid(5c197ee5-6a39-11e6-a230-04016789eb01)
+getGroupObjByUuid(5c197ee6-6a39-11e6-a230-04016789eb01)
+dumpGroup alias: [/CO2/Data Fields]
+db.getAttributeItems(5c197ee6-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 5c197ee6-6a39-11e6-a230-04016789eb01
+dumpAttribute: [HDF4_OBJECT_TYPE]
+getAttributeItemByUuid(groups, 5c197ee6-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_TYPE)
+dumpAttribute: [HDF4_OBJECT_NAME]
+getAttributeItemByUuid(groups, 5c197ee6-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_NAME)
+dumpAttribute: [HDF4_REF_NUM]
+getAttributeItemByUuid(groups, 5c197ee6-6a39-11e6-a230-04016789eb01, HDF4_REF_NUM)
+db.getLinkItems(5c197ee6-6a39-11e6-a230-04016789eb01)
+getGroupObjByUuid(5c197ee6-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(5c197ee6-6a39-11e6-a230-04016789eb01, [Latitude])
+getGroupObjByUuid(5c197ee6-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(5c197ee6-6a39-11e6-a230-04016789eb01, [Longitude])
+getGroupObjByUuid(5c197ee6-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(5c197ee6-6a39-11e6-a230-04016789eb01, [mole_fraction_of_carbon_dioxide_in_free_troposphere])
+getGroupObjByUuid(5c197ee6-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(5c197ee6-6a39-11e6-a230-04016789eb01, [mole_fraction_of_carbon_dioxide_in_free_troposphere_count])
+getGroupObjByUuid(5c197ee6-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(5c197ee6-6a39-11e6-a230-04016789eb01, [mole_fraction_of_carbon_dioxide_in_free_troposphere_sdev])
+getGroupObjByUuid(5c197ee6-6a39-11e6-a230-04016789eb01)
+getGroupObjByUuid(5c197eec-6a39-11e6-a230-04016789eb01)
+dumpGroup alias: [/CO2/Grid Attributes]
+db.getAttributeItems(5c197eec-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 5c197eec-6a39-11e6-a230-04016789eb01
+dumpAttribute: [HDF4_OBJECT_TYPE]
+getAttributeItemByUuid(groups, 5c197eec-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_TYPE)
+dumpAttribute: [HDF4_OBJECT_NAME]
+getAttributeItemByUuid(groups, 5c197eec-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_NAME)
+dumpAttribute: [HDF4_REF_NUM]
+getAttributeItemByUuid(groups, 5c197eec-6a39-11e6-a230-04016789eb01, HDF4_REF_NUM)
+db.getLinkItems(5c197eec-6a39-11e6-a230-04016789eb01)
+getGroupObjByUuid(5c197eec-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(5c197eec-6a39-11e6-a230-04016789eb01, [Day])
+getGroupObjByUuid(5c197eec-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(5c197eec-6a39-11e6-a230-04016789eb01, [Day_t])
+getGroupObjByUuid(5c197eec-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(5c197eec-6a39-11e6-a230-04016789eb01, [Month])
+getGroupObjByUuid(5c197eec-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(5c197eec-6a39-11e6-a230-04016789eb01, [Month_t])
+getGroupObjByUuid(5c197eec-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(5c197eec-6a39-11e6-a230-04016789eb01, [NumDays])
+getGroupObjByUuid(5c197eec-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(5c197eec-6a39-11e6-a230-04016789eb01, [NumDays_t])
+getGroupObjByUuid(5c197eec-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(5c197eec-6a39-11e6-a230-04016789eb01, [PresLvls])
+getGroupObjByUuid(5c197eec-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(5c197eec-6a39-11e6-a230-04016789eb01, [PresLvls_t])
+getGroupObjByUuid(5c197eec-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(5c197eec-6a39-11e6-a230-04016789eb01, [PresLyrs])
+getGroupObjByUuid(5c197eec-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(5c197eec-6a39-11e6-a230-04016789eb01, [PresLyrs_t])
+getGroupObjByUuid(5c197eec-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(5c197eec-6a39-11e6-a230-04016789eb01, [Year])
+getGroupObjByUuid(5c197eec-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(5c197eec-6a39-11e6-a230-04016789eb01, [Year_t])
+getGroupObjByUuid(5c197eec-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(5c197eec-6a39-11e6-a230-04016789eb01, [_FV_Latitude])
+getGroupObjByUuid(5c197eec-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(5c197eec-6a39-11e6-a230-04016789eb01, [_FV_Latitude_t])
+getGroupObjByUuid(5c197eec-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(5c197eec-6a39-11e6-a230-04016789eb01, [_FV_Longitude])
+getGroupObjByUuid(5c197eec-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(5c197eec-6a39-11e6-a230-04016789eb01, [_FV_Longitude_t])
+getGroupObjByUuid(5c197eec-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(5c197eec-6a39-11e6-a230-04016789eb01, [_FV_mole_fraction_of_carbon_dioxide_in_free_troposphere])
+getGroupObjByUuid(5c197eec-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(5c197eec-6a39-11e6-a230-04016789eb01, [_FV_mole_fraction_of_carbon_dioxide_in_free_troposphere_count])
+getGroupObjByUuid(5c197eec-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(5c197eec-6a39-11e6-a230-04016789eb01, [_FV_mole_fraction_of_carbon_dioxide_in_free_troposphere_count_t])
+getGroupObjByUuid(5c197eec-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(5c197eec-6a39-11e6-a230-04016789eb01, [_FV_mole_fraction_of_carbon_dioxide_in_free_troposphere_sdev])
+getGroupObjByUuid(5c197eec-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(5c197eec-6a39-11e6-a230-04016789eb01, [_FV_mole_fraction_of_carbon_dioxide_in_free_troposphere_sdev_t])
+getGroupObjByUuid(5c197eec-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(5c197eec-6a39-11e6-a230-04016789eb01, [_FV_mole_fraction_of_carbon_dioxide_in_free_troposphere_t])
+getGroupObjByUuid(5c197eec-6a39-11e6-a230-04016789eb01)
+getGroupObjByUuid(5c197f03-6a39-11e6-a230-04016789eb01)
+dumpGroup alias: [/HDF4_DIMGROUP]
+db.getAttributeItems(5c197f03-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 5c197f03-6a39-11e6-a230-04016789eb01
+db.getLinkItems(5c197f03-6a39-11e6-a230-04016789eb01)
+getGroupObjByUuid(5c197f03-6a39-11e6-a230-04016789eb01)
+db.getCollection(datasets)
+dumpDataset: 5c197ee7-6a39-11e6-a230-04016789eb01
+getDatasetObjByUuid(5c197ee7-6a39-11e6-a230-04016789eb01)
+getDatasetObjByUuid(5c197ee7-6a39-11e6-a230-04016789eb01)
+dumpDataset alias: [/CO2/Data Fields/Latitude]
+db.getAttributeItems(5c197ee7-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 5c197ee7-6a39-11e6-a230-04016789eb01
+dumpAttribute: [HDF4_OBJECT_TYPE]
+getAttributeItemByUuid(datasets, 5c197ee7-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_TYPE)
+dumpAttribute: [DIMENSION_NAMELIST]
+getAttributeItemByUuid(datasets, 5c197ee7-6a39-11e6-a230-04016789eb01, DIMENSION_NAMELIST)
+dumpAttribute: [_FillValue]
+getAttributeItemByUuid(datasets, 5c197ee7-6a39-11e6-a230-04016789eb01, _FillValue)
+dumpAttribute: [HDF4_OBJECT_NAME]
+getAttributeItemByUuid(datasets, 5c197ee7-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_NAME)
+dumpAttribute: [HDF4_REF_NUM]
+getAttributeItemByUuid(datasets, 5c197ee7-6a39-11e6-a230-04016789eb01, HDF4_REF_NUM)
+getDatasetObjByUuid(5c197ee7-6a39-11e6-a230-04016789eb01)
+dumpDataset: 5c197ee8-6a39-11e6-a230-04016789eb01
+getDatasetObjByUuid(5c197ee8-6a39-11e6-a230-04016789eb01)
+getDatasetObjByUuid(5c197ee8-6a39-11e6-a230-04016789eb01)
+dumpDataset alias: [/CO2/Data Fields/Longitude]
+db.getAttributeItems(5c197ee8-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 5c197ee8-6a39-11e6-a230-04016789eb01
+dumpAttribute: [DIMENSION_NAMELIST]
+getAttributeItemByUuid(datasets, 5c197ee8-6a39-11e6-a230-04016789eb01, DIMENSION_NAMELIST)
+dumpAttribute: [_FillValue]
+getAttributeItemByUuid(datasets, 5c197ee8-6a39-11e6-a230-04016789eb01, _FillValue)
+dumpAttribute: [HDF4_OBJECT_TYPE]
+getAttributeItemByUuid(datasets, 5c197ee8-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_TYPE)
+dumpAttribute: [HDF4_OBJECT_NAME]
+getAttributeItemByUuid(datasets, 5c197ee8-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_NAME)
+dumpAttribute: [HDF4_REF_NUM]
+getAttributeItemByUuid(datasets, 5c197ee8-6a39-11e6-a230-04016789eb01, HDF4_REF_NUM)
+getDatasetObjByUuid(5c197ee8-6a39-11e6-a230-04016789eb01)
+dumpDataset: 5c197ee9-6a39-11e6-a230-04016789eb01
+getDatasetObjByUuid(5c197ee9-6a39-11e6-a230-04016789eb01)
+getDatasetObjByUuid(5c197ee9-6a39-11e6-a230-04016789eb01)
+dumpDataset alias: [/CO2/Data Fields/mole_fraction_of_carbon_dioxide_in_free_troposphere]
+db.getAttributeItems(5c197ee9-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 5c197ee9-6a39-11e6-a230-04016789eb01
+dumpAttribute: [HDF4_OBJECT_TYPE]
+getAttributeItemByUuid(datasets, 5c197ee9-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_TYPE)
+dumpAttribute: [DIMENSION_NAMELIST]
+getAttributeItemByUuid(datasets, 5c197ee9-6a39-11e6-a230-04016789eb01, DIMENSION_NAMELIST)
+dumpAttribute: [_FillValue]
+getAttributeItemByUuid(datasets, 5c197ee9-6a39-11e6-a230-04016789eb01, _FillValue)
+dumpAttribute: [HDF4_OBJECT_NAME]
+getAttributeItemByUuid(datasets, 5c197ee9-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_NAME)
+dumpAttribute: [HDF4_REF_NUM]
+getAttributeItemByUuid(datasets, 5c197ee9-6a39-11e6-a230-04016789eb01, HDF4_REF_NUM)
+getDatasetObjByUuid(5c197ee9-6a39-11e6-a230-04016789eb01)
+dumpDataset: 5c197eea-6a39-11e6-a230-04016789eb01
+getDatasetObjByUuid(5c197eea-6a39-11e6-a230-04016789eb01)
+getDatasetObjByUuid(5c197eea-6a39-11e6-a230-04016789eb01)
+dumpDataset alias: [/CO2/Data Fields/mole_fraction_of_carbon_dioxide_in_free_troposphere_count]
+db.getAttributeItems(5c197eea-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 5c197eea-6a39-11e6-a230-04016789eb01
+dumpAttribute: [_FillValue]
+getAttributeItemByUuid(datasets, 5c197eea-6a39-11e6-a230-04016789eb01, _FillValue)
+dumpAttribute: [DIMENSION_NAMELIST]
+getAttributeItemByUuid(datasets, 5c197eea-6a39-11e6-a230-04016789eb01, DIMENSION_NAMELIST)
+dumpAttribute: [HDF4_OBJECT_TYPE]
+getAttributeItemByUuid(datasets, 5c197eea-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_TYPE)
+dumpAttribute: [HDF4_OBJECT_NAME]
+getAttributeItemByUuid(datasets, 5c197eea-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_NAME)
+dumpAttribute: [HDF4_REF_NUM]
+getAttributeItemByUuid(datasets, 5c197eea-6a39-11e6-a230-04016789eb01, HDF4_REF_NUM)
+getDatasetObjByUuid(5c197eea-6a39-11e6-a230-04016789eb01)
+dumpDataset: 5c197eeb-6a39-11e6-a230-04016789eb01
+getDatasetObjByUuid(5c197eeb-6a39-11e6-a230-04016789eb01)
+getDatasetObjByUuid(5c197eeb-6a39-11e6-a230-04016789eb01)
+dumpDataset alias: [/CO2/Data Fields/mole_fraction_of_carbon_dioxide_in_free_troposphere_sdev]
+db.getAttributeItems(5c197eeb-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 5c197eeb-6a39-11e6-a230-04016789eb01
+dumpAttribute: [DIMENSION_NAMELIST]
+getAttributeItemByUuid(datasets, 5c197eeb-6a39-11e6-a230-04016789eb01, DIMENSION_NAMELIST)
+dumpAttribute: [_FillValue]
+getAttributeItemByUuid(datasets, 5c197eeb-6a39-11e6-a230-04016789eb01, _FillValue)
+dumpAttribute: [HDF4_OBJECT_TYPE]
+getAttributeItemByUuid(datasets, 5c197eeb-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_TYPE)
+dumpAttribute: [HDF4_OBJECT_NAME]
+getAttributeItemByUuid(datasets, 5c197eeb-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_NAME)
+dumpAttribute: [HDF4_REF_NUM]
+getAttributeItemByUuid(datasets, 5c197eeb-6a39-11e6-a230-04016789eb01, HDF4_REF_NUM)
+getDatasetObjByUuid(5c197eeb-6a39-11e6-a230-04016789eb01)
+dumpDataset: 5c197eed-6a39-11e6-a230-04016789eb01
+getDatasetObjByUuid(5c197eed-6a39-11e6-a230-04016789eb01)
+getCommittedTypeItemByUuid(5c197eee-6a39-11e6-a230-04016789eb01)
+getCommittedTypeObjByUuid(5c197eee-6a39-11e6-a230-04016789eb01)
+getDatasetObjByUuid(5c197eed-6a39-11e6-a230-04016789eb01)
+dumpDataset alias: [/CO2/Grid Attributes/Day]
+db.getAttributeItems(5c197eed-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 5c197eed-6a39-11e6-a230-04016789eb01
+dumpAttribute: [TITLE]
+getAttributeItemByUuid(datasets, 5c197eed-6a39-11e6-a230-04016789eb01, TITLE)
+dumpAttribute: [CLASS]
+getAttributeItemByUuid(datasets, 5c197eed-6a39-11e6-a230-04016789eb01, CLASS)
+dumpAttribute: [VERSION]
+getAttributeItemByUuid(datasets, 5c197eed-6a39-11e6-a230-04016789eb01, VERSION)
+dumpAttribute: [FIELD_0_NAME]
+getAttributeItemByUuid(datasets, 5c197eed-6a39-11e6-a230-04016789eb01, FIELD_0_NAME)
+dumpAttribute: [HDF4_OBJECT_TYPE]
+getAttributeItemByUuid(datasets, 5c197eed-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_TYPE)
+dumpAttribute: [HDF4_OBJECT_NAME]
+getAttributeItemByUuid(datasets, 5c197eed-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_NAME)
+dumpAttribute: [HDF4_REF_NUM]
+getAttributeItemByUuid(datasets, 5c197eed-6a39-11e6-a230-04016789eb01, HDF4_REF_NUM)
+getDatasetObjByUuid(5c197eed-6a39-11e6-a230-04016789eb01)
+unable to print opaque type values
+dumpDataset: 5c197eef-6a39-11e6-a230-04016789eb01
+getDatasetObjByUuid(5c197eef-6a39-11e6-a230-04016789eb01)
+getCommittedTypeItemByUuid(5c197ef0-6a39-11e6-a230-04016789eb01)
+getCommittedTypeObjByUuid(5c197ef0-6a39-11e6-a230-04016789eb01)
+getDatasetObjByUuid(5c197eef-6a39-11e6-a230-04016789eb01)
+dumpDataset alias: [/CO2/Grid Attributes/Month]
+db.getAttributeItems(5c197eef-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 5c197eef-6a39-11e6-a230-04016789eb01
+dumpAttribute: [TITLE]
+getAttributeItemByUuid(datasets, 5c197eef-6a39-11e6-a230-04016789eb01, TITLE)
+dumpAttribute: [CLASS]
+getAttributeItemByUuid(datasets, 5c197eef-6a39-11e6-a230-04016789eb01, CLASS)
+dumpAttribute: [VERSION]
+getAttributeItemByUuid(datasets, 5c197eef-6a39-11e6-a230-04016789eb01, VERSION)
+dumpAttribute: [FIELD_0_NAME]
+getAttributeItemByUuid(datasets, 5c197eef-6a39-11e6-a230-04016789eb01, FIELD_0_NAME)
+dumpAttribute: [HDF4_OBJECT_TYPE]
+getAttributeItemByUuid(datasets, 5c197eef-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_TYPE)
+dumpAttribute: [HDF4_OBJECT_NAME]
+getAttributeItemByUuid(datasets, 5c197eef-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_NAME)
+dumpAttribute: [HDF4_REF_NUM]
+getAttributeItemByUuid(datasets, 5c197eef-6a39-11e6-a230-04016789eb01, HDF4_REF_NUM)
+getDatasetObjByUuid(5c197eef-6a39-11e6-a230-04016789eb01)
+unable to print opaque type values
+dumpDataset: 5c197ef1-6a39-11e6-a230-04016789eb01
+getDatasetObjByUuid(5c197ef1-6a39-11e6-a230-04016789eb01)
+getCommittedTypeItemByUuid(5c197ef2-6a39-11e6-a230-04016789eb01)
+getCommittedTypeObjByUuid(5c197ef2-6a39-11e6-a230-04016789eb01)
+getDatasetObjByUuid(5c197ef1-6a39-11e6-a230-04016789eb01)
+dumpDataset alias: [/CO2/Grid Attributes/NumDays]
+db.getAttributeItems(5c197ef1-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 5c197ef1-6a39-11e6-a230-04016789eb01
+dumpAttribute: [TITLE]
+getAttributeItemByUuid(datasets, 5c197ef1-6a39-11e6-a230-04016789eb01, TITLE)
+dumpAttribute: [CLASS]
+getAttributeItemByUuid(datasets, 5c197ef1-6a39-11e6-a230-04016789eb01, CLASS)
+dumpAttribute: [VERSION]
+getAttributeItemByUuid(datasets, 5c197ef1-6a39-11e6-a230-04016789eb01, VERSION)
+dumpAttribute: [FIELD_0_NAME]
+getAttributeItemByUuid(datasets, 5c197ef1-6a39-11e6-a230-04016789eb01, FIELD_0_NAME)
+dumpAttribute: [HDF4_OBJECT_TYPE]
+getAttributeItemByUuid(datasets, 5c197ef1-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_TYPE)
+dumpAttribute: [HDF4_OBJECT_NAME]
+getAttributeItemByUuid(datasets, 5c197ef1-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_NAME)
+dumpAttribute: [HDF4_REF_NUM]
+getAttributeItemByUuid(datasets, 5c197ef1-6a39-11e6-a230-04016789eb01, HDF4_REF_NUM)
+getDatasetObjByUuid(5c197ef1-6a39-11e6-a230-04016789eb01)
+unable to print opaque type values
+dumpDataset: 5c197ef3-6a39-11e6-a230-04016789eb01
+getDatasetObjByUuid(5c197ef3-6a39-11e6-a230-04016789eb01)
+getCommittedTypeItemByUuid(5c197ef4-6a39-11e6-a230-04016789eb01)
+getCommittedTypeObjByUuid(5c197ef4-6a39-11e6-a230-04016789eb01)
+getDatasetObjByUuid(5c197ef3-6a39-11e6-a230-04016789eb01)
+dumpDataset alias: [/CO2/Grid Attributes/PresLvls]
+db.getAttributeItems(5c197ef3-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 5c197ef3-6a39-11e6-a230-04016789eb01
+dumpAttribute: [TITLE]
+getAttributeItemByUuid(datasets, 5c197ef3-6a39-11e6-a230-04016789eb01, TITLE)
+dumpAttribute: [CLASS]
+getAttributeItemByUuid(datasets, 5c197ef3-6a39-11e6-a230-04016789eb01, CLASS)
+dumpAttribute: [VERSION]
+getAttributeItemByUuid(datasets, 5c197ef3-6a39-11e6-a230-04016789eb01, VERSION)
+dumpAttribute: [FIELD_0_NAME]
+getAttributeItemByUuid(datasets, 5c197ef3-6a39-11e6-a230-04016789eb01, FIELD_0_NAME)
+dumpAttribute: [HDF4_OBJECT_TYPE]
+getAttributeItemByUuid(datasets, 5c197ef3-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_TYPE)
+dumpAttribute: [HDF4_OBJECT_NAME]
+getAttributeItemByUuid(datasets, 5c197ef3-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_NAME)
+dumpAttribute: [HDF4_REF_NUM]
+getAttributeItemByUuid(datasets, 5c197ef3-6a39-11e6-a230-04016789eb01, HDF4_REF_NUM)
+getDatasetObjByUuid(5c197ef3-6a39-11e6-a230-04016789eb01)
+unable to print opaque type values
+dumpDataset: 5c197ef5-6a39-11e6-a230-04016789eb01
+getDatasetObjByUuid(5c197ef5-6a39-11e6-a230-04016789eb01)
+getCommittedTypeItemByUuid(5c197ef6-6a39-11e6-a230-04016789eb01)
+getCommittedTypeObjByUuid(5c197ef6-6a39-11e6-a230-04016789eb01)
+getDatasetObjByUuid(5c197ef5-6a39-11e6-a230-04016789eb01)
+dumpDataset alias: [/CO2/Grid Attributes/PresLyrs]
+db.getAttributeItems(5c197ef5-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 5c197ef5-6a39-11e6-a230-04016789eb01
+dumpAttribute: [TITLE]
+getAttributeItemByUuid(datasets, 5c197ef5-6a39-11e6-a230-04016789eb01, TITLE)
+dumpAttribute: [CLASS]
+getAttributeItemByUuid(datasets, 5c197ef5-6a39-11e6-a230-04016789eb01, CLASS)
+dumpAttribute: [VERSION]
+getAttributeItemByUuid(datasets, 5c197ef5-6a39-11e6-a230-04016789eb01, VERSION)
+dumpAttribute: [FIELD_0_NAME]
+getAttributeItemByUuid(datasets, 5c197ef5-6a39-11e6-a230-04016789eb01, FIELD_0_NAME)
+dumpAttribute: [HDF4_OBJECT_TYPE]
+getAttributeItemByUuid(datasets, 5c197ef5-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_TYPE)
+dumpAttribute: [HDF4_OBJECT_NAME]
+getAttributeItemByUuid(datasets, 5c197ef5-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_NAME)
+dumpAttribute: [HDF4_REF_NUM]
+getAttributeItemByUuid(datasets, 5c197ef5-6a39-11e6-a230-04016789eb01, HDF4_REF_NUM)
+getDatasetObjByUuid(5c197ef5-6a39-11e6-a230-04016789eb01)
+unable to print opaque type values
+dumpDataset: 5c197ef7-6a39-11e6-a230-04016789eb01
+getDatasetObjByUuid(5c197ef7-6a39-11e6-a230-04016789eb01)
+getCommittedTypeItemByUuid(5c197ef8-6a39-11e6-a230-04016789eb01)
+getCommittedTypeObjByUuid(5c197ef8-6a39-11e6-a230-04016789eb01)
+getDatasetObjByUuid(5c197ef7-6a39-11e6-a230-04016789eb01)
+dumpDataset alias: [/CO2/Grid Attributes/Year]
+db.getAttributeItems(5c197ef7-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 5c197ef7-6a39-11e6-a230-04016789eb01
+dumpAttribute: [TITLE]
+getAttributeItemByUuid(datasets, 5c197ef7-6a39-11e6-a230-04016789eb01, TITLE)
+dumpAttribute: [CLASS]
+getAttributeItemByUuid(datasets, 5c197ef7-6a39-11e6-a230-04016789eb01, CLASS)
+dumpAttribute: [VERSION]
+getAttributeItemByUuid(datasets, 5c197ef7-6a39-11e6-a230-04016789eb01, VERSION)
+dumpAttribute: [FIELD_0_NAME]
+getAttributeItemByUuid(datasets, 5c197ef7-6a39-11e6-a230-04016789eb01, FIELD_0_NAME)
+dumpAttribute: [HDF4_OBJECT_TYPE]
+getAttributeItemByUuid(datasets, 5c197ef7-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_TYPE)
+dumpAttribute: [HDF4_OBJECT_NAME]
+getAttributeItemByUuid(datasets, 5c197ef7-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_NAME)
+dumpAttribute: [HDF4_REF_NUM]
+getAttributeItemByUuid(datasets, 5c197ef7-6a39-11e6-a230-04016789eb01, HDF4_REF_NUM)
+getDatasetObjByUuid(5c197ef7-6a39-11e6-a230-04016789eb01)
+unable to print opaque type values
+dumpDataset: 5c197ef9-6a39-11e6-a230-04016789eb01
+getDatasetObjByUuid(5c197ef9-6a39-11e6-a230-04016789eb01)
+getCommittedTypeItemByUuid(5c197efa-6a39-11e6-a230-04016789eb01)
+getCommittedTypeObjByUuid(5c197efa-6a39-11e6-a230-04016789eb01)
+getDatasetObjByUuid(5c197ef9-6a39-11e6-a230-04016789eb01)
+dumpDataset alias: [/CO2/Grid Attributes/_FV_Latitude]
+db.getAttributeItems(5c197ef9-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 5c197ef9-6a39-11e6-a230-04016789eb01
+dumpAttribute: [TITLE]
+getAttributeItemByUuid(datasets, 5c197ef9-6a39-11e6-a230-04016789eb01, TITLE)
+dumpAttribute: [CLASS]
+getAttributeItemByUuid(datasets, 5c197ef9-6a39-11e6-a230-04016789eb01, CLASS)
+dumpAttribute: [FIELD_0_NAME]
+getAttributeItemByUuid(datasets, 5c197ef9-6a39-11e6-a230-04016789eb01, FIELD_0_NAME)
+dumpAttribute: [VERSION]
+getAttributeItemByUuid(datasets, 5c197ef9-6a39-11e6-a230-04016789eb01, VERSION)
+dumpAttribute: [HDF4_OBJECT_TYPE]
+getAttributeItemByUuid(datasets, 5c197ef9-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_TYPE)
+dumpAttribute: [HDF4_OBJECT_NAME]
+getAttributeItemByUuid(datasets, 5c197ef9-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_NAME)
+dumpAttribute: [HDF4_REF_NUM]
+getAttributeItemByUuid(datasets, 5c197ef9-6a39-11e6-a230-04016789eb01, HDF4_REF_NUM)
+getDatasetObjByUuid(5c197ef9-6a39-11e6-a230-04016789eb01)
+unable to print opaque type values
+dumpDataset: 5c197efb-6a39-11e6-a230-04016789eb01
+getDatasetObjByUuid(5c197efb-6a39-11e6-a230-04016789eb01)
+getCommittedTypeItemByUuid(5c197efc-6a39-11e6-a230-04016789eb01)
+getCommittedTypeObjByUuid(5c197efc-6a39-11e6-a230-04016789eb01)
+getDatasetObjByUuid(5c197efb-6a39-11e6-a230-04016789eb01)
+dumpDataset alias: [/CO2/Grid Attributes/_FV_Longitude]
+db.getAttributeItems(5c197efb-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 5c197efb-6a39-11e6-a230-04016789eb01
+dumpAttribute: [TITLE]
+getAttributeItemByUuid(datasets, 5c197efb-6a39-11e6-a230-04016789eb01, TITLE)
+dumpAttribute: [CLASS]
+getAttributeItemByUuid(datasets, 5c197efb-6a39-11e6-a230-04016789eb01, CLASS)
+dumpAttribute: [FIELD_0_NAME]
+getAttributeItemByUuid(datasets, 5c197efb-6a39-11e6-a230-04016789eb01, FIELD_0_NAME)
+dumpAttribute: [HDF4_OBJECT_TYPE]
+getAttributeItemByUuid(datasets, 5c197efb-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_TYPE)
+dumpAttribute: [HDF4_OBJECT_NAME]
+getAttributeItemByUuid(datasets, 5c197efb-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_NAME)
+dumpAttribute: [HDF4_REF_NUM]
+getAttributeItemByUuid(datasets, 5c197efb-6a39-11e6-a230-04016789eb01, HDF4_REF_NUM)
+dumpAttribute: [VERSION]
+getAttributeItemByUuid(datasets, 5c197efb-6a39-11e6-a230-04016789eb01, VERSION)
+getDatasetObjByUuid(5c197efb-6a39-11e6-a230-04016789eb01)
+unable to print opaque type values
+dumpDataset: 5c197efd-6a39-11e6-a230-04016789eb01
+getDatasetObjByUuid(5c197efd-6a39-11e6-a230-04016789eb01)
+getCommittedTypeItemByUuid(5c197f02-6a39-11e6-a230-04016789eb01)
+getCommittedTypeObjByUuid(5c197f02-6a39-11e6-a230-04016789eb01)
+getDatasetObjByUuid(5c197efd-6a39-11e6-a230-04016789eb01)
+dumpDataset alias: [/CO2/Grid Attributes/_FV_mole_fraction_of_carbon_dioxide_in_free_troposphere]
+db.getAttributeItems(5c197efd-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 5c197efd-6a39-11e6-a230-04016789eb01
+dumpAttribute: [TITLE]
+getAttributeItemByUuid(datasets, 5c197efd-6a39-11e6-a230-04016789eb01, TITLE)
+dumpAttribute: [VERSION]
+getAttributeItemByUuid(datasets, 5c197efd-6a39-11e6-a230-04016789eb01, VERSION)
+dumpAttribute: [FIELD_0_NAME]
+getAttributeItemByUuid(datasets, 5c197efd-6a39-11e6-a230-04016789eb01, FIELD_0_NAME)
+dumpAttribute: [CLASS]
+getAttributeItemByUuid(datasets, 5c197efd-6a39-11e6-a230-04016789eb01, CLASS)
+dumpAttribute: [HDF4_OBJECT_TYPE]
+getAttributeItemByUuid(datasets, 5c197efd-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_TYPE)
+dumpAttribute: [HDF4_OBJECT_NAME]
+getAttributeItemByUuid(datasets, 5c197efd-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_NAME)
+dumpAttribute: [HDF4_REF_NUM]
+getAttributeItemByUuid(datasets, 5c197efd-6a39-11e6-a230-04016789eb01, HDF4_REF_NUM)
+getDatasetObjByUuid(5c197efd-6a39-11e6-a230-04016789eb01)
+unable to print opaque type values
+dumpDataset: 5c197efe-6a39-11e6-a230-04016789eb01
+getDatasetObjByUuid(5c197efe-6a39-11e6-a230-04016789eb01)
+getCommittedTypeItemByUuid(5c197eff-6a39-11e6-a230-04016789eb01)
+getCommittedTypeObjByUuid(5c197eff-6a39-11e6-a230-04016789eb01)
+getDatasetObjByUuid(5c197efe-6a39-11e6-a230-04016789eb01)
+dumpDataset alias: [/CO2/Grid Attributes/_FV_mole_fraction_of_carbon_dioxide_in_free_troposphere_count]
+db.getAttributeItems(5c197efe-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 5c197efe-6a39-11e6-a230-04016789eb01
+dumpAttribute: [TITLE]
+getAttributeItemByUuid(datasets, 5c197efe-6a39-11e6-a230-04016789eb01, TITLE)
+dumpAttribute: [CLASS]
+getAttributeItemByUuid(datasets, 5c197efe-6a39-11e6-a230-04016789eb01, CLASS)
+dumpAttribute: [VERSION]
+getAttributeItemByUuid(datasets, 5c197efe-6a39-11e6-a230-04016789eb01, VERSION)
+dumpAttribute: [FIELD_0_NAME]
+getAttributeItemByUuid(datasets, 5c197efe-6a39-11e6-a230-04016789eb01, FIELD_0_NAME)
+dumpAttribute: [HDF4_OBJECT_TYPE]
+getAttributeItemByUuid(datasets, 5c197efe-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_TYPE)
+dumpAttribute: [HDF4_OBJECT_NAME]
+getAttributeItemByUuid(datasets, 5c197efe-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_NAME)
+dumpAttribute: [HDF4_REF_NUM]
+getAttributeItemByUuid(datasets, 5c197efe-6a39-11e6-a230-04016789eb01, HDF4_REF_NUM)
+getDatasetObjByUuid(5c197efe-6a39-11e6-a230-04016789eb01)
+unable to print opaque type values
+dumpDataset: 5c197f00-6a39-11e6-a230-04016789eb01
+getDatasetObjByUuid(5c197f00-6a39-11e6-a230-04016789eb01)
+getCommittedTypeItemByUuid(5c197f01-6a39-11e6-a230-04016789eb01)
+getCommittedTypeObjByUuid(5c197f01-6a39-11e6-a230-04016789eb01)
+getDatasetObjByUuid(5c197f00-6a39-11e6-a230-04016789eb01)
+dumpDataset alias: [/CO2/Grid Attributes/_FV_mole_fraction_of_carbon_dioxide_in_free_troposphere_sdev]
+db.getAttributeItems(5c197f00-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 5c197f00-6a39-11e6-a230-04016789eb01
+dumpAttribute: [TITLE]
+getAttributeItemByUuid(datasets, 5c197f00-6a39-11e6-a230-04016789eb01, TITLE)
+dumpAttribute: [CLASS]
+getAttributeItemByUuid(datasets, 5c197f00-6a39-11e6-a230-04016789eb01, CLASS)
+dumpAttribute: [VERSION]
+getAttributeItemByUuid(datasets, 5c197f00-6a39-11e6-a230-04016789eb01, VERSION)
+dumpAttribute: [FIELD_0_NAME]
+getAttributeItemByUuid(datasets, 5c197f00-6a39-11e6-a230-04016789eb01, FIELD_0_NAME)
+dumpAttribute: [HDF4_OBJECT_TYPE]
+getAttributeItemByUuid(datasets, 5c197f00-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_TYPE)
+dumpAttribute: [HDF4_OBJECT_NAME]
+getAttributeItemByUuid(datasets, 5c197f00-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_NAME)
+dumpAttribute: [HDF4_REF_NUM]
+getAttributeItemByUuid(datasets, 5c197f00-6a39-11e6-a230-04016789eb01, HDF4_REF_NUM)
+getDatasetObjByUuid(5c197f00-6a39-11e6-a230-04016789eb01)
+unable to print opaque type values
+db.getCollection(datatypes)
+getCommittedTypeItemByUuid(5c197eee-6a39-11e6-a230-04016789eb01)
+getCommittedTypeObjByUuid(5c197eee-6a39-11e6-a230-04016789eb01)
+db.getAttributeItems(5c197eee-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 5c197eee-6a39-11e6-a230-04016789eb01
+getCommittedTypeItemByUuid(5c197ef0-6a39-11e6-a230-04016789eb01)
+getCommittedTypeObjByUuid(5c197ef0-6a39-11e6-a230-04016789eb01)
+db.getAttributeItems(5c197ef0-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 5c197ef0-6a39-11e6-a230-04016789eb01
+getCommittedTypeItemByUuid(5c197ef2-6a39-11e6-a230-04016789eb01)
+getCommittedTypeObjByUuid(5c197ef2-6a39-11e6-a230-04016789eb01)
+db.getAttributeItems(5c197ef2-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 5c197ef2-6a39-11e6-a230-04016789eb01
+getCommittedTypeItemByUuid(5c197ef4-6a39-11e6-a230-04016789eb01)
+getCommittedTypeObjByUuid(5c197ef4-6a39-11e6-a230-04016789eb01)
+db.getAttributeItems(5c197ef4-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 5c197ef4-6a39-11e6-a230-04016789eb01
+getCommittedTypeItemByUuid(5c197ef6-6a39-11e6-a230-04016789eb01)
+getCommittedTypeObjByUuid(5c197ef6-6a39-11e6-a230-04016789eb01)
+db.getAttributeItems(5c197ef6-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 5c197ef6-6a39-11e6-a230-04016789eb01
+getCommittedTypeItemByUuid(5c197ef8-6a39-11e6-a230-04016789eb01)
+getCommittedTypeObjByUuid(5c197ef8-6a39-11e6-a230-04016789eb01)
+db.getAttributeItems(5c197ef8-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 5c197ef8-6a39-11e6-a230-04016789eb01
+getCommittedTypeItemByUuid(5c197efa-6a39-11e6-a230-04016789eb01)
+getCommittedTypeObjByUuid(5c197efa-6a39-11e6-a230-04016789eb01)
+db.getAttributeItems(5c197efa-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 5c197efa-6a39-11e6-a230-04016789eb01
+getCommittedTypeItemByUuid(5c197efc-6a39-11e6-a230-04016789eb01)
+getCommittedTypeObjByUuid(5c197efc-6a39-11e6-a230-04016789eb01)
+db.getAttributeItems(5c197efc-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 5c197efc-6a39-11e6-a230-04016789eb01
+getCommittedTypeItemByUuid(5c197eff-6a39-11e6-a230-04016789eb01)
+getCommittedTypeObjByUuid(5c197eff-6a39-11e6-a230-04016789eb01)
+db.getAttributeItems(5c197eff-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 5c197eff-6a39-11e6-a230-04016789eb01
+getCommittedTypeItemByUuid(5c197f01-6a39-11e6-a230-04016789eb01)
+getCommittedTypeObjByUuid(5c197f01-6a39-11e6-a230-04016789eb01)
+db.getAttributeItems(5c197f01-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 5c197f01-6a39-11e6-a230-04016789eb01
+getCommittedTypeItemByUuid(5c197f02-6a39-11e6-a230-04016789eb01)
+getCommittedTypeObjByUuid(5c197f02-6a39-11e6-a230-04016789eb01)
+db.getAttributeItems(5c197f02-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 5c197f02-6a39-11e6-a230-04016789eb01
+Hdf5db __exit
+h5tojson data/AIRS.2016.05.01.L3.CO2Std_IR031.v5.9.14.0.IRonly.X16165113849.he5
+Using dbFile: /tmp/tmprjZGXs
+init -- filePath: data/AIRS.2016.05.01.L3.CO2Std_IR031.v5.9.14.0.IRonly.X16165113849.he5 mode: r
+dbFilePath: /tmp/tmprjZGXs mode: r+
+Hdf5db __enter
+initializing file
+visit: CO2 name: Group
+visit: CO2/Data Fields name: Group
+visit: CO2/Data Fields/Latitude name: Dataset
+visit: CO2/Data Fields/Longitude name: Dataset
+visit: CO2/Data Fields/mole_fraction_of_carbon_dioxide_in_free_troposphere name: Dataset
+visit: CO2/Data Fields/mole_fraction_of_carbon_dioxide_in_free_troposphere_count name: Dataset
+visit: CO2/Data Fields/mole_fraction_of_carbon_dioxide_in_free_troposphere_sdev name: Dataset
+visit: CO2/Grid Attributes name: Group
+visit: CO2/Grid Attributes/Day name: Dataset
+visit: CO2/Grid Attributes/Day_t name: Datatype
+visit: CO2/Grid Attributes/Month name: Dataset
+visit: CO2/Grid Attributes/Month_t name: Datatype
+visit: CO2/Grid Attributes/NumDays name: Dataset
+visit: CO2/Grid Attributes/NumDays_t name: Datatype
+visit: CO2/Grid Attributes/PresLvls name: Dataset
+visit: CO2/Grid Attributes/PresLvls_t name: Datatype
+visit: CO2/Grid Attributes/PresLyrs name: Dataset
+visit: CO2/Grid Attributes/PresLyrs_t name: Datatype
+visit: CO2/Grid Attributes/Year name: Dataset
+visit: CO2/Grid Attributes/Year_t name: Datatype
+visit: CO2/Grid Attributes/_FV_Latitude name: Dataset
+visit: CO2/Grid Attributes/_FV_Latitude_t name: Datatype
+visit: CO2/Grid Attributes/_FV_Longitude name: Dataset
+visit: CO2/Grid Attributes/_FV_Longitude_t name: Datatype
+visit: CO2/Grid Attributes/_FV_mole_fraction_of_carbon_dioxide_in_free_troposphere name: Dataset
+visit: CO2/Grid Attributes/_FV_mole_fraction_of_carbon_dioxide_in_free_troposphere_count name: Dataset
+visit: CO2/Grid Attributes/_FV_mole_fraction_of_carbon_dioxide_in_free_troposphere_count_t name: Datatype
+visit: CO2/Grid Attributes/_FV_mole_fraction_of_carbon_dioxide_in_free_troposphere_sdev name: Dataset
+visit: CO2/Grid Attributes/_FV_mole_fraction_of_carbon_dioxide_in_free_troposphere_sdev_t name: Datatype
+visit: CO2/Grid Attributes/_FV_mole_fraction_of_carbon_dioxide_in_free_troposphere_t name: Datatype
+visit: HDF4_DIMGROUP name: Group
+getUUIDByPath: [/]
+getGroupObjByUuid(68a35978-6a39-11e6-a230-04016789eb01)
+dumpGroup alias: [/]
+db.getAttributeItems(68a35978-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 68a35978-6a39-11e6-a230-04016789eb01
+dumpAttribute: [HDFEOSVersion_GLOSDS]
+getAttributeItemByUuid(groups, 68a35978-6a39-11e6-a230-04016789eb01, HDFEOSVersion_GLOSDS)
+dumpAttribute: [StructMetadata.0_GLOSDS]
+getAttributeItemByUuid(groups, 68a35978-6a39-11e6-a230-04016789eb01, StructMetadata.0_GLOSDS)
+dumpAttribute: [coremetadata_GLOSDS_001]
+getAttributeItemByUuid(groups, 68a35978-6a39-11e6-a230-04016789eb01, coremetadata_GLOSDS_001)
+dumpAttribute: [coremetadata_GLOSDS_002]
+getAttributeItemByUuid(groups, 68a35978-6a39-11e6-a230-04016789eb01, coremetadata_GLOSDS_002)
+dumpAttribute: [coremetadata.1_GLOSDS_001]
+getAttributeItemByUuid(groups, 68a35978-6a39-11e6-a230-04016789eb01, coremetadata.1_GLOSDS_001)
+dumpAttribute: [coremetadata.1_GLOSDS_002]
+getAttributeItemByUuid(groups, 68a35978-6a39-11e6-a230-04016789eb01, coremetadata.1_GLOSDS_002)
+dumpAttribute: [coremetadata.2_GLOSDS]
+getAttributeItemByUuid(groups, 68a35978-6a39-11e6-a230-04016789eb01, coremetadata.2_GLOSDS)
+db.getLinkItems(68a35978-6a39-11e6-a230-04016789eb01)
+getGroupObjByUuid(68a35978-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(68a35978-6a39-11e6-a230-04016789eb01, [CO2])
+getGroupObjByUuid(68a35978-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(68a35978-6a39-11e6-a230-04016789eb01, [HDF4_DIMGROUP])
+getGroupObjByUuid(68a35978-6a39-11e6-a230-04016789eb01)
+db.getCollection(groups)
+getGroupObjByUuid(68a35979-6a39-11e6-a230-04016789eb01)
+dumpGroup alias: [/CO2]
+db.getAttributeItems(68a35979-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 68a35979-6a39-11e6-a230-04016789eb01
+dumpAttribute: [HDF4_OBJECT_TYPE]
+getAttributeItemByUuid(groups, 68a35979-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_TYPE)
+dumpAttribute: [HDF4_OBJECT_NAME]
+getAttributeItemByUuid(groups, 68a35979-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_NAME)
+dumpAttribute: [HDF4_REF_NUM]
+getAttributeItemByUuid(groups, 68a35979-6a39-11e6-a230-04016789eb01, HDF4_REF_NUM)
+db.getLinkItems(68a35979-6a39-11e6-a230-04016789eb01)
+getGroupObjByUuid(68a35979-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(68a35979-6a39-11e6-a230-04016789eb01, [Data Fields])
+getGroupObjByUuid(68a35979-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(68a35979-6a39-11e6-a230-04016789eb01, [Grid Attributes])
+getGroupObjByUuid(68a35979-6a39-11e6-a230-04016789eb01)
+getGroupObjByUuid(68a3597a-6a39-11e6-a230-04016789eb01)
+dumpGroup alias: [/CO2/Data Fields]
+db.getAttributeItems(68a3597a-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 68a3597a-6a39-11e6-a230-04016789eb01
+dumpAttribute: [HDF4_OBJECT_TYPE]
+getAttributeItemByUuid(groups, 68a3597a-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_TYPE)
+dumpAttribute: [HDF4_OBJECT_NAME]
+getAttributeItemByUuid(groups, 68a3597a-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_NAME)
+dumpAttribute: [HDF4_REF_NUM]
+getAttributeItemByUuid(groups, 68a3597a-6a39-11e6-a230-04016789eb01, HDF4_REF_NUM)
+db.getLinkItems(68a3597a-6a39-11e6-a230-04016789eb01)
+getGroupObjByUuid(68a3597a-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(68a3597a-6a39-11e6-a230-04016789eb01, [Latitude])
+getGroupObjByUuid(68a3597a-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(68a3597a-6a39-11e6-a230-04016789eb01, [Longitude])
+getGroupObjByUuid(68a3597a-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(68a3597a-6a39-11e6-a230-04016789eb01, [mole_fraction_of_carbon_dioxide_in_free_troposphere])
+getGroupObjByUuid(68a3597a-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(68a3597a-6a39-11e6-a230-04016789eb01, [mole_fraction_of_carbon_dioxide_in_free_troposphere_count])
+getGroupObjByUuid(68a3597a-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(68a3597a-6a39-11e6-a230-04016789eb01, [mole_fraction_of_carbon_dioxide_in_free_troposphere_sdev])
+getGroupObjByUuid(68a3597a-6a39-11e6-a230-04016789eb01)
+getGroupObjByUuid(68a35980-6a39-11e6-a230-04016789eb01)
+dumpGroup alias: [/CO2/Grid Attributes]
+db.getAttributeItems(68a35980-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 68a35980-6a39-11e6-a230-04016789eb01
+dumpAttribute: [HDF4_OBJECT_TYPE]
+getAttributeItemByUuid(groups, 68a35980-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_TYPE)
+dumpAttribute: [HDF4_OBJECT_NAME]
+getAttributeItemByUuid(groups, 68a35980-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_NAME)
+dumpAttribute: [HDF4_REF_NUM]
+getAttributeItemByUuid(groups, 68a35980-6a39-11e6-a230-04016789eb01, HDF4_REF_NUM)
+db.getLinkItems(68a35980-6a39-11e6-a230-04016789eb01)
+getGroupObjByUuid(68a35980-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(68a35980-6a39-11e6-a230-04016789eb01, [Day])
+getGroupObjByUuid(68a35980-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(68a35980-6a39-11e6-a230-04016789eb01, [Day_t])
+getGroupObjByUuid(68a35980-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(68a35980-6a39-11e6-a230-04016789eb01, [Month])
+getGroupObjByUuid(68a35980-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(68a35980-6a39-11e6-a230-04016789eb01, [Month_t])
+getGroupObjByUuid(68a35980-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(68a35980-6a39-11e6-a230-04016789eb01, [NumDays])
+getGroupObjByUuid(68a35980-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(68a35980-6a39-11e6-a230-04016789eb01, [NumDays_t])
+getGroupObjByUuid(68a35980-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(68a35980-6a39-11e6-a230-04016789eb01, [PresLvls])
+getGroupObjByUuid(68a35980-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(68a35980-6a39-11e6-a230-04016789eb01, [PresLvls_t])
+getGroupObjByUuid(68a35980-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(68a35980-6a39-11e6-a230-04016789eb01, [PresLyrs])
+getGroupObjByUuid(68a35980-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(68a35980-6a39-11e6-a230-04016789eb01, [PresLyrs_t])
+getGroupObjByUuid(68a35980-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(68a35980-6a39-11e6-a230-04016789eb01, [Year])
+getGroupObjByUuid(68a35980-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(68a35980-6a39-11e6-a230-04016789eb01, [Year_t])
+getGroupObjByUuid(68a35980-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(68a35980-6a39-11e6-a230-04016789eb01, [_FV_Latitude])
+getGroupObjByUuid(68a35980-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(68a35980-6a39-11e6-a230-04016789eb01, [_FV_Latitude_t])
+getGroupObjByUuid(68a35980-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(68a35980-6a39-11e6-a230-04016789eb01, [_FV_Longitude])
+getGroupObjByUuid(68a35980-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(68a35980-6a39-11e6-a230-04016789eb01, [_FV_Longitude_t])
+getGroupObjByUuid(68a35980-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(68a35980-6a39-11e6-a230-04016789eb01, [_FV_mole_fraction_of_carbon_dioxide_in_free_troposphere])
+getGroupObjByUuid(68a35980-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(68a35980-6a39-11e6-a230-04016789eb01, [_FV_mole_fraction_of_carbon_dioxide_in_free_troposphere_count])
+getGroupObjByUuid(68a35980-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(68a35980-6a39-11e6-a230-04016789eb01, [_FV_mole_fraction_of_carbon_dioxide_in_free_troposphere_count_t])
+getGroupObjByUuid(68a35980-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(68a35980-6a39-11e6-a230-04016789eb01, [_FV_mole_fraction_of_carbon_dioxide_in_free_troposphere_sdev])
+getGroupObjByUuid(68a35980-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(68a35980-6a39-11e6-a230-04016789eb01, [_FV_mole_fraction_of_carbon_dioxide_in_free_troposphere_sdev_t])
+getGroupObjByUuid(68a35980-6a39-11e6-a230-04016789eb01)
+db.getLinkItemByUuid(68a35980-6a39-11e6-a230-04016789eb01, [_FV_mole_fraction_of_carbon_dioxide_in_free_troposphere_t])
+getGroupObjByUuid(68a35980-6a39-11e6-a230-04016789eb01)
+getGroupObjByUuid(68a35997-6a39-11e6-a230-04016789eb01)
+dumpGroup alias: [/HDF4_DIMGROUP]
+db.getAttributeItems(68a35997-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 68a35997-6a39-11e6-a230-04016789eb01
+db.getLinkItems(68a35997-6a39-11e6-a230-04016789eb01)
+getGroupObjByUuid(68a35997-6a39-11e6-a230-04016789eb01)
+db.getCollection(datasets)
+dumpDataset: 68a3597b-6a39-11e6-a230-04016789eb01
+getDatasetObjByUuid(68a3597b-6a39-11e6-a230-04016789eb01)
+getDatasetObjByUuid(68a3597b-6a39-11e6-a230-04016789eb01)
+dumpDataset alias: [/CO2/Data Fields/Latitude]
+db.getAttributeItems(68a3597b-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 68a3597b-6a39-11e6-a230-04016789eb01
+dumpAttribute: [HDF4_OBJECT_TYPE]
+getAttributeItemByUuid(datasets, 68a3597b-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_TYPE)
+dumpAttribute: [DIMENSION_NAMELIST]
+getAttributeItemByUuid(datasets, 68a3597b-6a39-11e6-a230-04016789eb01, DIMENSION_NAMELIST)
+dumpAttribute: [_FillValue]
+getAttributeItemByUuid(datasets, 68a3597b-6a39-11e6-a230-04016789eb01, _FillValue)
+dumpAttribute: [HDF4_OBJECT_NAME]
+getAttributeItemByUuid(datasets, 68a3597b-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_NAME)
+dumpAttribute: [HDF4_REF_NUM]
+getAttributeItemByUuid(datasets, 68a3597b-6a39-11e6-a230-04016789eb01, HDF4_REF_NUM)
+getDatasetObjByUuid(68a3597b-6a39-11e6-a230-04016789eb01)
+dumpDataset: 68a3597c-6a39-11e6-a230-04016789eb01
+getDatasetObjByUuid(68a3597c-6a39-11e6-a230-04016789eb01)
+getDatasetObjByUuid(68a3597c-6a39-11e6-a230-04016789eb01)
+dumpDataset alias: [/CO2/Data Fields/Longitude]
+db.getAttributeItems(68a3597c-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 68a3597c-6a39-11e6-a230-04016789eb01
+dumpAttribute: [DIMENSION_NAMELIST]
+getAttributeItemByUuid(datasets, 68a3597c-6a39-11e6-a230-04016789eb01, DIMENSION_NAMELIST)
+dumpAttribute: [_FillValue]
+getAttributeItemByUuid(datasets, 68a3597c-6a39-11e6-a230-04016789eb01, _FillValue)
+dumpAttribute: [HDF4_OBJECT_TYPE]
+getAttributeItemByUuid(datasets, 68a3597c-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_TYPE)
+dumpAttribute: [HDF4_OBJECT_NAME]
+getAttributeItemByUuid(datasets, 68a3597c-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_NAME)
+dumpAttribute: [HDF4_REF_NUM]
+getAttributeItemByUuid(datasets, 68a3597c-6a39-11e6-a230-04016789eb01, HDF4_REF_NUM)
+getDatasetObjByUuid(68a3597c-6a39-11e6-a230-04016789eb01)
+dumpDataset: 68a3597d-6a39-11e6-a230-04016789eb01
+getDatasetObjByUuid(68a3597d-6a39-11e6-a230-04016789eb01)
+getDatasetObjByUuid(68a3597d-6a39-11e6-a230-04016789eb01)
+dumpDataset alias: [/CO2/Data Fields/mole_fraction_of_carbon_dioxide_in_free_troposphere]
+db.getAttributeItems(68a3597d-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 68a3597d-6a39-11e6-a230-04016789eb01
+dumpAttribute: [HDF4_OBJECT_TYPE]
+getAttributeItemByUuid(datasets, 68a3597d-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_TYPE)
+dumpAttribute: [DIMENSION_NAMELIST]
+getAttributeItemByUuid(datasets, 68a3597d-6a39-11e6-a230-04016789eb01, DIMENSION_NAMELIST)
+dumpAttribute: [_FillValue]
+getAttributeItemByUuid(datasets, 68a3597d-6a39-11e6-a230-04016789eb01, _FillValue)
+dumpAttribute: [HDF4_OBJECT_NAME]
+getAttributeItemByUuid(datasets, 68a3597d-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_NAME)
+dumpAttribute: [HDF4_REF_NUM]
+getAttributeItemByUuid(datasets, 68a3597d-6a39-11e6-a230-04016789eb01, HDF4_REF_NUM)
+getDatasetObjByUuid(68a3597d-6a39-11e6-a230-04016789eb01)
+dumpDataset: 68a3597e-6a39-11e6-a230-04016789eb01
+getDatasetObjByUuid(68a3597e-6a39-11e6-a230-04016789eb01)
+getDatasetObjByUuid(68a3597e-6a39-11e6-a230-04016789eb01)
+dumpDataset alias: [/CO2/Data Fields/mole_fraction_of_carbon_dioxide_in_free_troposphere_count]
+db.getAttributeItems(68a3597e-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 68a3597e-6a39-11e6-a230-04016789eb01
+dumpAttribute: [_FillValue]
+getAttributeItemByUuid(datasets, 68a3597e-6a39-11e6-a230-04016789eb01, _FillValue)
+dumpAttribute: [DIMENSION_NAMELIST]
+getAttributeItemByUuid(datasets, 68a3597e-6a39-11e6-a230-04016789eb01, DIMENSION_NAMELIST)
+dumpAttribute: [HDF4_OBJECT_TYPE]
+getAttributeItemByUuid(datasets, 68a3597e-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_TYPE)
+dumpAttribute: [HDF4_OBJECT_NAME]
+getAttributeItemByUuid(datasets, 68a3597e-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_NAME)
+dumpAttribute: [HDF4_REF_NUM]
+getAttributeItemByUuid(datasets, 68a3597e-6a39-11e6-a230-04016789eb01, HDF4_REF_NUM)
+getDatasetObjByUuid(68a3597e-6a39-11e6-a230-04016789eb01)
+dumpDataset: 68a3597f-6a39-11e6-a230-04016789eb01
+getDatasetObjByUuid(68a3597f-6a39-11e6-a230-04016789eb01)
+getDatasetObjByUuid(68a3597f-6a39-11e6-a230-04016789eb01)
+dumpDataset alias: [/CO2/Data Fields/mole_fraction_of_carbon_dioxide_in_free_troposphere_sdev]
+db.getAttributeItems(68a3597f-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 68a3597f-6a39-11e6-a230-04016789eb01
+dumpAttribute: [DIMENSION_NAMELIST]
+getAttributeItemByUuid(datasets, 68a3597f-6a39-11e6-a230-04016789eb01, DIMENSION_NAMELIST)
+dumpAttribute: [_FillValue]
+getAttributeItemByUuid(datasets, 68a3597f-6a39-11e6-a230-04016789eb01, _FillValue)
+dumpAttribute: [HDF4_OBJECT_TYPE]
+getAttributeItemByUuid(datasets, 68a3597f-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_TYPE)
+dumpAttribute: [HDF4_OBJECT_NAME]
+getAttributeItemByUuid(datasets, 68a3597f-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_NAME)
+dumpAttribute: [HDF4_REF_NUM]
+getAttributeItemByUuid(datasets, 68a3597f-6a39-11e6-a230-04016789eb01, HDF4_REF_NUM)
+getDatasetObjByUuid(68a3597f-6a39-11e6-a230-04016789eb01)
+dumpDataset: 68a35981-6a39-11e6-a230-04016789eb01
+getDatasetObjByUuid(68a35981-6a39-11e6-a230-04016789eb01)
+getCommittedTypeItemByUuid(68a35982-6a39-11e6-a230-04016789eb01)
+getCommittedTypeObjByUuid(68a35982-6a39-11e6-a230-04016789eb01)
+getDatasetObjByUuid(68a35981-6a39-11e6-a230-04016789eb01)
+dumpDataset alias: [/CO2/Grid Attributes/Day]
+db.getAttributeItems(68a35981-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 68a35981-6a39-11e6-a230-04016789eb01
+dumpAttribute: [TITLE]
+getAttributeItemByUuid(datasets, 68a35981-6a39-11e6-a230-04016789eb01, TITLE)
+dumpAttribute: [CLASS]
+getAttributeItemByUuid(datasets, 68a35981-6a39-11e6-a230-04016789eb01, CLASS)
+dumpAttribute: [VERSION]
+getAttributeItemByUuid(datasets, 68a35981-6a39-11e6-a230-04016789eb01, VERSION)
+dumpAttribute: [FIELD_0_NAME]
+getAttributeItemByUuid(datasets, 68a35981-6a39-11e6-a230-04016789eb01, FIELD_0_NAME)
+dumpAttribute: [HDF4_OBJECT_TYPE]
+getAttributeItemByUuid(datasets, 68a35981-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_TYPE)
+dumpAttribute: [HDF4_OBJECT_NAME]
+getAttributeItemByUuid(datasets, 68a35981-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_NAME)
+dumpAttribute: [HDF4_REF_NUM]
+getAttributeItemByUuid(datasets, 68a35981-6a39-11e6-a230-04016789eb01, HDF4_REF_NUM)
+getDatasetObjByUuid(68a35981-6a39-11e6-a230-04016789eb01)
+unable to print opaque type values
+dumpDataset: 68a35983-6a39-11e6-a230-04016789eb01
+getDatasetObjByUuid(68a35983-6a39-11e6-a230-04016789eb01)
+getCommittedTypeItemByUuid(68a35984-6a39-11e6-a230-04016789eb01)
+getCommittedTypeObjByUuid(68a35984-6a39-11e6-a230-04016789eb01)
+getDatasetObjByUuid(68a35983-6a39-11e6-a230-04016789eb01)
+dumpDataset alias: [/CO2/Grid Attributes/Month]
+db.getAttributeItems(68a35983-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 68a35983-6a39-11e6-a230-04016789eb01
+dumpAttribute: [TITLE]
+getAttributeItemByUuid(datasets, 68a35983-6a39-11e6-a230-04016789eb01, TITLE)
+dumpAttribute: [CLASS]
+getAttributeItemByUuid(datasets, 68a35983-6a39-11e6-a230-04016789eb01, CLASS)
+dumpAttribute: [VERSION]
+getAttributeItemByUuid(datasets, 68a35983-6a39-11e6-a230-04016789eb01, VERSION)
+dumpAttribute: [FIELD_0_NAME]
+getAttributeItemByUuid(datasets, 68a35983-6a39-11e6-a230-04016789eb01, FIELD_0_NAME)
+dumpAttribute: [HDF4_OBJECT_TYPE]
+getAttributeItemByUuid(datasets, 68a35983-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_TYPE)
+dumpAttribute: [HDF4_OBJECT_NAME]
+getAttributeItemByUuid(datasets, 68a35983-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_NAME)
+dumpAttribute: [HDF4_REF_NUM]
+getAttributeItemByUuid(datasets, 68a35983-6a39-11e6-a230-04016789eb01, HDF4_REF_NUM)
+getDatasetObjByUuid(68a35983-6a39-11e6-a230-04016789eb01)
+unable to print opaque type values
+dumpDataset: 68a35985-6a39-11e6-a230-04016789eb01
+getDatasetObjByUuid(68a35985-6a39-11e6-a230-04016789eb01)
+getCommittedTypeItemByUuid(68a35986-6a39-11e6-a230-04016789eb01)
+getCommittedTypeObjByUuid(68a35986-6a39-11e6-a230-04016789eb01)
+getDatasetObjByUuid(68a35985-6a39-11e6-a230-04016789eb01)
+dumpDataset alias: [/CO2/Grid Attributes/NumDays]
+db.getAttributeItems(68a35985-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 68a35985-6a39-11e6-a230-04016789eb01
+dumpAttribute: [TITLE]
+getAttributeItemByUuid(datasets, 68a35985-6a39-11e6-a230-04016789eb01, TITLE)
+dumpAttribute: [CLASS]
+getAttributeItemByUuid(datasets, 68a35985-6a39-11e6-a230-04016789eb01, CLASS)
+dumpAttribute: [VERSION]
+getAttributeItemByUuid(datasets, 68a35985-6a39-11e6-a230-04016789eb01, VERSION)
+dumpAttribute: [FIELD_0_NAME]
+getAttributeItemByUuid(datasets, 68a35985-6a39-11e6-a230-04016789eb01, FIELD_0_NAME)
+dumpAttribute: [HDF4_OBJECT_TYPE]
+getAttributeItemByUuid(datasets, 68a35985-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_TYPE)
+dumpAttribute: [HDF4_OBJECT_NAME]
+getAttributeItemByUuid(datasets, 68a35985-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_NAME)
+dumpAttribute: [HDF4_REF_NUM]
+getAttributeItemByUuid(datasets, 68a35985-6a39-11e6-a230-04016789eb01, HDF4_REF_NUM)
+getDatasetObjByUuid(68a35985-6a39-11e6-a230-04016789eb01)
+unable to print opaque type values
+dumpDataset: 68a35987-6a39-11e6-a230-04016789eb01
+getDatasetObjByUuid(68a35987-6a39-11e6-a230-04016789eb01)
+getCommittedTypeItemByUuid(68a35988-6a39-11e6-a230-04016789eb01)
+getCommittedTypeObjByUuid(68a35988-6a39-11e6-a230-04016789eb01)
+getDatasetObjByUuid(68a35987-6a39-11e6-a230-04016789eb01)
+dumpDataset alias: [/CO2/Grid Attributes/PresLvls]
+db.getAttributeItems(68a35987-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 68a35987-6a39-11e6-a230-04016789eb01
+dumpAttribute: [TITLE]
+getAttributeItemByUuid(datasets, 68a35987-6a39-11e6-a230-04016789eb01, TITLE)
+dumpAttribute: [CLASS]
+getAttributeItemByUuid(datasets, 68a35987-6a39-11e6-a230-04016789eb01, CLASS)
+dumpAttribute: [VERSION]
+getAttributeItemByUuid(datasets, 68a35987-6a39-11e6-a230-04016789eb01, VERSION)
+dumpAttribute: [FIELD_0_NAME]
+getAttributeItemByUuid(datasets, 68a35987-6a39-11e6-a230-04016789eb01, FIELD_0_NAME)
+dumpAttribute: [HDF4_OBJECT_TYPE]
+getAttributeItemByUuid(datasets, 68a35987-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_TYPE)
+dumpAttribute: [HDF4_OBJECT_NAME]
+getAttributeItemByUuid(datasets, 68a35987-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_NAME)
+dumpAttribute: [HDF4_REF_NUM]
+getAttributeItemByUuid(datasets, 68a35987-6a39-11e6-a230-04016789eb01, HDF4_REF_NUM)
+getDatasetObjByUuid(68a35987-6a39-11e6-a230-04016789eb01)
+unable to print opaque type values
+dumpDataset: 68a35989-6a39-11e6-a230-04016789eb01
+getDatasetObjByUuid(68a35989-6a39-11e6-a230-04016789eb01)
+getCommittedTypeItemByUuid(68a3598a-6a39-11e6-a230-04016789eb01)
+getCommittedTypeObjByUuid(68a3598a-6a39-11e6-a230-04016789eb01)
+getDatasetObjByUuid(68a35989-6a39-11e6-a230-04016789eb01)
+dumpDataset alias: [/CO2/Grid Attributes/PresLyrs]
+db.getAttributeItems(68a35989-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 68a35989-6a39-11e6-a230-04016789eb01
+dumpAttribute: [TITLE]
+getAttributeItemByUuid(datasets, 68a35989-6a39-11e6-a230-04016789eb01, TITLE)
+dumpAttribute: [CLASS]
+getAttributeItemByUuid(datasets, 68a35989-6a39-11e6-a230-04016789eb01, CLASS)
+dumpAttribute: [VERSION]
+getAttributeItemByUuid(datasets, 68a35989-6a39-11e6-a230-04016789eb01, VERSION)
+dumpAttribute: [FIELD_0_NAME]
+getAttributeItemByUuid(datasets, 68a35989-6a39-11e6-a230-04016789eb01, FIELD_0_NAME)
+dumpAttribute: [HDF4_OBJECT_TYPE]
+getAttributeItemByUuid(datasets, 68a35989-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_TYPE)
+dumpAttribute: [HDF4_OBJECT_NAME]
+getAttributeItemByUuid(datasets, 68a35989-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_NAME)
+dumpAttribute: [HDF4_REF_NUM]
+getAttributeItemByUuid(datasets, 68a35989-6a39-11e6-a230-04016789eb01, HDF4_REF_NUM)
+getDatasetObjByUuid(68a35989-6a39-11e6-a230-04016789eb01)
+unable to print opaque type values
+dumpDataset: 68a3598b-6a39-11e6-a230-04016789eb01
+getDatasetObjByUuid(68a3598b-6a39-11e6-a230-04016789eb01)
+getCommittedTypeItemByUuid(68a3598c-6a39-11e6-a230-04016789eb01)
+getCommittedTypeObjByUuid(68a3598c-6a39-11e6-a230-04016789eb01)
+getDatasetObjByUuid(68a3598b-6a39-11e6-a230-04016789eb01)
+dumpDataset alias: [/CO2/Grid Attributes/Year]
+db.getAttributeItems(68a3598b-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 68a3598b-6a39-11e6-a230-04016789eb01
+dumpAttribute: [TITLE]
+getAttributeItemByUuid(datasets, 68a3598b-6a39-11e6-a230-04016789eb01, TITLE)
+dumpAttribute: [CLASS]
+getAttributeItemByUuid(datasets, 68a3598b-6a39-11e6-a230-04016789eb01, CLASS)
+dumpAttribute: [VERSION]
+getAttributeItemByUuid(datasets, 68a3598b-6a39-11e6-a230-04016789eb01, VERSION)
+dumpAttribute: [FIELD_0_NAME]
+getAttributeItemByUuid(datasets, 68a3598b-6a39-11e6-a230-04016789eb01, FIELD_0_NAME)
+dumpAttribute: [HDF4_OBJECT_TYPE]
+getAttributeItemByUuid(datasets, 68a3598b-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_TYPE)
+dumpAttribute: [HDF4_OBJECT_NAME]
+getAttributeItemByUuid(datasets, 68a3598b-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_NAME)
+dumpAttribute: [HDF4_REF_NUM]
+getAttributeItemByUuid(datasets, 68a3598b-6a39-11e6-a230-04016789eb01, HDF4_REF_NUM)
+getDatasetObjByUuid(68a3598b-6a39-11e6-a230-04016789eb01)
+unable to print opaque type values
+dumpDataset: 68a3598d-6a39-11e6-a230-04016789eb01
+getDatasetObjByUuid(68a3598d-6a39-11e6-a230-04016789eb01)
+getCommittedTypeItemByUuid(68a3598e-6a39-11e6-a230-04016789eb01)
+getCommittedTypeObjByUuid(68a3598e-6a39-11e6-a230-04016789eb01)
+getDatasetObjByUuid(68a3598d-6a39-11e6-a230-04016789eb01)
+dumpDataset alias: [/CO2/Grid Attributes/_FV_Latitude]
+db.getAttributeItems(68a3598d-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 68a3598d-6a39-11e6-a230-04016789eb01
+dumpAttribute: [TITLE]
+getAttributeItemByUuid(datasets, 68a3598d-6a39-11e6-a230-04016789eb01, TITLE)
+dumpAttribute: [CLASS]
+getAttributeItemByUuid(datasets, 68a3598d-6a39-11e6-a230-04016789eb01, CLASS)
+dumpAttribute: [FIELD_0_NAME]
+getAttributeItemByUuid(datasets, 68a3598d-6a39-11e6-a230-04016789eb01, FIELD_0_NAME)
+dumpAttribute: [VERSION]
+getAttributeItemByUuid(datasets, 68a3598d-6a39-11e6-a230-04016789eb01, VERSION)
+dumpAttribute: [HDF4_OBJECT_TYPE]
+getAttributeItemByUuid(datasets, 68a3598d-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_TYPE)
+dumpAttribute: [HDF4_OBJECT_NAME]
+getAttributeItemByUuid(datasets, 68a3598d-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_NAME)
+dumpAttribute: [HDF4_REF_NUM]
+getAttributeItemByUuid(datasets, 68a3598d-6a39-11e6-a230-04016789eb01, HDF4_REF_NUM)
+getDatasetObjByUuid(68a3598d-6a39-11e6-a230-04016789eb01)
+unable to print opaque type values
+dumpDataset: 68a3598f-6a39-11e6-a230-04016789eb01
+getDatasetObjByUuid(68a3598f-6a39-11e6-a230-04016789eb01)
+getCommittedTypeItemByUuid(68a35990-6a39-11e6-a230-04016789eb01)
+getCommittedTypeObjByUuid(68a35990-6a39-11e6-a230-04016789eb01)
+getDatasetObjByUuid(68a3598f-6a39-11e6-a230-04016789eb01)
+dumpDataset alias: [/CO2/Grid Attributes/_FV_Longitude]
+db.getAttributeItems(68a3598f-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 68a3598f-6a39-11e6-a230-04016789eb01
+dumpAttribute: [TITLE]
+getAttributeItemByUuid(datasets, 68a3598f-6a39-11e6-a230-04016789eb01, TITLE)
+dumpAttribute: [CLASS]
+getAttributeItemByUuid(datasets, 68a3598f-6a39-11e6-a230-04016789eb01, CLASS)
+dumpAttribute: [FIELD_0_NAME]
+getAttributeItemByUuid(datasets, 68a3598f-6a39-11e6-a230-04016789eb01, FIELD_0_NAME)
+dumpAttribute: [HDF4_OBJECT_TYPE]
+getAttributeItemByUuid(datasets, 68a3598f-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_TYPE)
+dumpAttribute: [HDF4_OBJECT_NAME]
+getAttributeItemByUuid(datasets, 68a3598f-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_NAME)
+dumpAttribute: [HDF4_REF_NUM]
+getAttributeItemByUuid(datasets, 68a3598f-6a39-11e6-a230-04016789eb01, HDF4_REF_NUM)
+dumpAttribute: [VERSION]
+getAttributeItemByUuid(datasets, 68a3598f-6a39-11e6-a230-04016789eb01, VERSION)
+getDatasetObjByUuid(68a3598f-6a39-11e6-a230-04016789eb01)
+unable to print opaque type values
+dumpDataset: 68a35991-6a39-11e6-a230-04016789eb01
+getDatasetObjByUuid(68a35991-6a39-11e6-a230-04016789eb01)
+getCommittedTypeItemByUuid(68a35996-6a39-11e6-a230-04016789eb01)
+getCommittedTypeObjByUuid(68a35996-6a39-11e6-a230-04016789eb01)
+getDatasetObjByUuid(68a35991-6a39-11e6-a230-04016789eb01)
+dumpDataset alias: [/CO2/Grid Attributes/_FV_mole_fraction_of_carbon_dioxide_in_free_troposphere]
+db.getAttributeItems(68a35991-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 68a35991-6a39-11e6-a230-04016789eb01
+dumpAttribute: [TITLE]
+getAttributeItemByUuid(datasets, 68a35991-6a39-11e6-a230-04016789eb01, TITLE)
+dumpAttribute: [VERSION]
+getAttributeItemByUuid(datasets, 68a35991-6a39-11e6-a230-04016789eb01, VERSION)
+dumpAttribute: [FIELD_0_NAME]
+getAttributeItemByUuid(datasets, 68a35991-6a39-11e6-a230-04016789eb01, FIELD_0_NAME)
+dumpAttribute: [CLASS]
+getAttributeItemByUuid(datasets, 68a35991-6a39-11e6-a230-04016789eb01, CLASS)
+dumpAttribute: [HDF4_OBJECT_TYPE]
+getAttributeItemByUuid(datasets, 68a35991-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_TYPE)
+dumpAttribute: [HDF4_OBJECT_NAME]
+getAttributeItemByUuid(datasets, 68a35991-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_NAME)
+dumpAttribute: [HDF4_REF_NUM]
+getAttributeItemByUuid(datasets, 68a35991-6a39-11e6-a230-04016789eb01, HDF4_REF_NUM)
+getDatasetObjByUuid(68a35991-6a39-11e6-a230-04016789eb01)
+unable to print opaque type values
+dumpDataset: 68a35992-6a39-11e6-a230-04016789eb01
+getDatasetObjByUuid(68a35992-6a39-11e6-a230-04016789eb01)
+getCommittedTypeItemByUuid(68a35993-6a39-11e6-a230-04016789eb01)
+getCommittedTypeObjByUuid(68a35993-6a39-11e6-a230-04016789eb01)
+getDatasetObjByUuid(68a35992-6a39-11e6-a230-04016789eb01)
+dumpDataset alias: [/CO2/Grid Attributes/_FV_mole_fraction_of_carbon_dioxide_in_free_troposphere_count]
+db.getAttributeItems(68a35992-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 68a35992-6a39-11e6-a230-04016789eb01
+dumpAttribute: [TITLE]
+getAttributeItemByUuid(datasets, 68a35992-6a39-11e6-a230-04016789eb01, TITLE)
+dumpAttribute: [CLASS]
+getAttributeItemByUuid(datasets, 68a35992-6a39-11e6-a230-04016789eb01, CLASS)
+dumpAttribute: [VERSION]
+getAttributeItemByUuid(datasets, 68a35992-6a39-11e6-a230-04016789eb01, VERSION)
+dumpAttribute: [FIELD_0_NAME]
+getAttributeItemByUuid(datasets, 68a35992-6a39-11e6-a230-04016789eb01, FIELD_0_NAME)
+dumpAttribute: [HDF4_OBJECT_TYPE]
+getAttributeItemByUuid(datasets, 68a35992-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_TYPE)
+dumpAttribute: [HDF4_OBJECT_NAME]
+getAttributeItemByUuid(datasets, 68a35992-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_NAME)
+dumpAttribute: [HDF4_REF_NUM]
+getAttributeItemByUuid(datasets, 68a35992-6a39-11e6-a230-04016789eb01, HDF4_REF_NUM)
+getDatasetObjByUuid(68a35992-6a39-11e6-a230-04016789eb01)
+unable to print opaque type values
+dumpDataset: 68a35994-6a39-11e6-a230-04016789eb01
+getDatasetObjByUuid(68a35994-6a39-11e6-a230-04016789eb01)
+getCommittedTypeItemByUuid(68a35995-6a39-11e6-a230-04016789eb01)
+getCommittedTypeObjByUuid(68a35995-6a39-11e6-a230-04016789eb01)
+getDatasetObjByUuid(68a35994-6a39-11e6-a230-04016789eb01)
+dumpDataset alias: [/CO2/Grid Attributes/_FV_mole_fraction_of_carbon_dioxide_in_free_troposphere_sdev]
+db.getAttributeItems(68a35994-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 68a35994-6a39-11e6-a230-04016789eb01
+dumpAttribute: [TITLE]
+getAttributeItemByUuid(datasets, 68a35994-6a39-11e6-a230-04016789eb01, TITLE)
+dumpAttribute: [CLASS]
+getAttributeItemByUuid(datasets, 68a35994-6a39-11e6-a230-04016789eb01, CLASS)
+dumpAttribute: [VERSION]
+getAttributeItemByUuid(datasets, 68a35994-6a39-11e6-a230-04016789eb01, VERSION)
+dumpAttribute: [FIELD_0_NAME]
+getAttributeItemByUuid(datasets, 68a35994-6a39-11e6-a230-04016789eb01, FIELD_0_NAME)
+dumpAttribute: [HDF4_OBJECT_TYPE]
+getAttributeItemByUuid(datasets, 68a35994-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_TYPE)
+dumpAttribute: [HDF4_OBJECT_NAME]
+getAttributeItemByUuid(datasets, 68a35994-6a39-11e6-a230-04016789eb01, HDF4_OBJECT_NAME)
+dumpAttribute: [HDF4_REF_NUM]
+getAttributeItemByUuid(datasets, 68a35994-6a39-11e6-a230-04016789eb01, HDF4_REF_NUM)
+getDatasetObjByUuid(68a35994-6a39-11e6-a230-04016789eb01)
+unable to print opaque type values
+db.getCollection(datatypes)
+getCommittedTypeItemByUuid(68a35982-6a39-11e6-a230-04016789eb01)
+getCommittedTypeObjByUuid(68a35982-6a39-11e6-a230-04016789eb01)
+db.getAttributeItems(68a35982-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 68a35982-6a39-11e6-a230-04016789eb01
+getCommittedTypeItemByUuid(68a35984-6a39-11e6-a230-04016789eb01)
+getCommittedTypeObjByUuid(68a35984-6a39-11e6-a230-04016789eb01)
+db.getAttributeItems(68a35984-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 68a35984-6a39-11e6-a230-04016789eb01
+getCommittedTypeItemByUuid(68a35986-6a39-11e6-a230-04016789eb01)
+getCommittedTypeObjByUuid(68a35986-6a39-11e6-a230-04016789eb01)
+db.getAttributeItems(68a35986-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 68a35986-6a39-11e6-a230-04016789eb01
+getCommittedTypeItemByUuid(68a35988-6a39-11e6-a230-04016789eb01)
+getCommittedTypeObjByUuid(68a35988-6a39-11e6-a230-04016789eb01)
+db.getAttributeItems(68a35988-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 68a35988-6a39-11e6-a230-04016789eb01
+getCommittedTypeItemByUuid(68a3598a-6a39-11e6-a230-04016789eb01)
+getCommittedTypeObjByUuid(68a3598a-6a39-11e6-a230-04016789eb01)
+db.getAttributeItems(68a3598a-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 68a3598a-6a39-11e6-a230-04016789eb01
+getCommittedTypeItemByUuid(68a3598c-6a39-11e6-a230-04016789eb01)
+getCommittedTypeObjByUuid(68a3598c-6a39-11e6-a230-04016789eb01)
+db.getAttributeItems(68a3598c-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 68a3598c-6a39-11e6-a230-04016789eb01
+getCommittedTypeItemByUuid(68a3598e-6a39-11e6-a230-04016789eb01)
+getCommittedTypeObjByUuid(68a3598e-6a39-11e6-a230-04016789eb01)
+db.getAttributeItems(68a3598e-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 68a3598e-6a39-11e6-a230-04016789eb01
+getCommittedTypeItemByUuid(68a35990-6a39-11e6-a230-04016789eb01)
+getCommittedTypeObjByUuid(68a35990-6a39-11e6-a230-04016789eb01)
+db.getAttributeItems(68a35990-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 68a35990-6a39-11e6-a230-04016789eb01
+getCommittedTypeItemByUuid(68a35993-6a39-11e6-a230-04016789eb01)
+getCommittedTypeObjByUuid(68a35993-6a39-11e6-a230-04016789eb01)
+db.getAttributeItems(68a35993-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 68a35993-6a39-11e6-a230-04016789eb01
+getCommittedTypeItemByUuid(68a35995-6a39-11e6-a230-04016789eb01)
+getCommittedTypeObjByUuid(68a35995-6a39-11e6-a230-04016789eb01)
+db.getAttributeItems(68a35995-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 68a35995-6a39-11e6-a230-04016789eb01
+getCommittedTypeItemByUuid(68a35996-6a39-11e6-a230-04016789eb01)
+getCommittedTypeObjByUuid(68a35996-6a39-11e6-a230-04016789eb01)
+db.getAttributeItems(68a35996-6a39-11e6-a230-04016789eb01)
+dumpAttributes: 68a35996-6a39-11e6-a230-04016789eb01
+Hdf5db __exit
