@@ -115,6 +115,11 @@ curl -X POST \
 
 ## Testing
 
+start h5serv before running tests
+```bash
+python app.py --domain=skyapi.wenzowski.com
+```
+
 ```bash
 pytest tests/*.py
 ```
