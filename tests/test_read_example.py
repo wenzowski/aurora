@@ -1,28 +1,44 @@
 import h5pyd as h5py
-from numpy import dtype, all
+from numpy import dtype
+
+
+visitedItems = []
+foundItems = []
+visitedItemsDict = {}
+
 
 def visit_item(name):
-    print('visit:', name)
+    visitedItems.append(name)
     return None
+
 
 def find_g1_2(name):
     print('visit:', name)
-    if name.endswith('g1.2'):
-        return True  # stop iteration
+    foundItems.append(name)
+    if name == '/g2/dset2.1':
+        return True  # any defined return value stops iteration
+    return None
 
 
 def visit_item_obj(name, obj):
-    print('visit:', name, obj.id.id)
+    visitedItemsDict[name] = obj.id.id
     return None
+
 
 def test_version():
     assert h5py.version.version == '0.0.1'
 
+
 def keys(g2):
     return [key for key in g2]
 
+
 def test_network():
-    f = h5py.File('tall.data.hdfgroup.org', 'r', endpoint='https://data.hdfgroup.org:7258')
+    f = h5py.File(
+        'tall.data.hdfgroup.org',
+        'r',
+        endpoint='https://data.hdfgroup.org:7258'
+    )
     assert f.filename == 'tall.data.hdfgroup.org'
     assert f.name == '/'
     assert f.id.id == '4af80138-3e8a-11e6-a48f-0242ac110003'
@@ -36,14 +52,14 @@ def test_network():
 
     assert keys(g2) == ['dset2.1', 'dset2.2']
 
-    assert ('xyz' in g2) == False
-    assert ('dset2.1' in g2) == True
+    assert ('xyz' in g2) is False
+    assert ('dset2.1' in g2) is True
 
     dset21 = g2['dset2.1']
     assert dset21.id.id == '4af97dd8-3e8a-11e6-a48f-0242ac110003'
     assert dset21.name == '/g2/dset2.1'
     assert dset21.shape == (10,)
-    assert dset21.dtype == dtype('>f4') # four numpy fields?
+    assert dset21.dtype == dtype('>f4')  # four numpy fields?
 
     dset111 = f['/g1/g1.1/dset1.1.1']
     assert dset111.id.id == '4af8bc72-3e8a-11e6-a48f-0242ac110003'
@@ -52,22 +68,39 @@ def test_network():
     assert dset111.dtype == dtype('>i4')
     assert len(dset111) == 10
 
-
-    attr1 = dset111.attrs['attr1']
-    mockattr1 = [ 49, 115, 116,  32,  97, 116, 116, 114, 105,  98, 117, 116, 101, 32, 111, 102,  32, 100, 115, 101, 116,  49,  46,  49,  46,  49,   0 ]
-    assert (attr1 == mockattr1).all()
     assert len(dset111.attrs) == 2
-    #  assert type(dset111.attrs.keys()) is KeysView
+    #    assert type(dset111.attrs.keys()) is KeysView
     assert keys(dset111.attrs) == ['attr1', 'attr2']
 
-    for attr in dset111.attrs:
-        assert attr == None
+    f.visit(visit_item)
+    assert visitedItems == [
+        '/g2',
+        '/g2/dset2.2',
+        '/g2/dset2.1',
+        '/g1',
+        '/g1/g1.2',
+        '/g1/g1.2/g1.2.1',
+        '/g1/g1.1',
+        '/g1/g1.1/dset1.1.2',
+        '/g1/g1.1/dset1.1.1'
+    ]
 
-    #  print('visit...')
-    #  f.visit(visit_item)
+    status = f.visit(find_g1_2)
+    # visit aborts iteration
+    assert foundItems == ['/g2', '/g2/dset2.2', '/g2/dset2.1']
+    assert status is None  # visit does not return search status
 
-    #  print('visititems...')
-    #  f.visititems(visit_item_obj)
-
-    #  print('search g1.2:')
-    #  f.visit(find_g1_2)
+    # print('visititems...')
+    # visit_item_obj()
+    f.visititems(visit_item_obj)
+    assert visitedItemsDict == {
+        '/g1': '4af86b14-3e8a-11e6-a48f-0242ac110003',
+        '/g1/g1.1': '4af88f0e-3e8a-11e6-a48f-0242ac110003',
+        '/g1/g1.1/dset1.1.1': '4af8bc72-3e8a-11e6-a48f-0242ac110003',
+        '/g1/g1.1/dset1.1.2': '4af8e602-3e8a-11e6-a48f-0242ac110003',
+        '/g1/g1.2': '4af90b64-3e8a-11e6-a48f-0242ac110003',
+        '/g1/g1.2/g1.2.1': '4af930ee-3e8a-11e6-a48f-0242ac110003',
+        '/g2': '4af955c4-3e8a-11e6-a48f-0242ac110003',
+        '/g2/dset2.1': '4af97dd8-3e8a-11e6-a48f-0242ac110003',
+        '/g2/dset2.2': '4af9a7c2-3e8a-11e6-a48f-0242ac110003'
+    }
