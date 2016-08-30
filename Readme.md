@@ -54,7 +54,7 @@ https://www2.acom.ucar.edu/mopitt/products
 
 ## API Proposal
 
-### Level 3 Call Format
+### Level 2 Call Format
 
 The API functions by posting JSON to an endpoint
 Geo queries are an array of [latitude, longitude] pairs.
@@ -64,52 +64,25 @@ Dates are in ISO 8601 in UTC.
 curl -X POST \
   -H "x-api-key: $API_KEY" \
   -H "Content-Type:application/json" \
-  -d '{"geo":[[-71.1043443253471,-42.3150676015829],[71.1043443253471,-42.3150676015829],[71.1043443253471,42.3150676015829],[-71.1043443253471,42.3150676015829],[-71.1043443253471,-42.3150676015829]],"from_time":"2016-08-23T17:23:05.070Z","to_time":"2016-08-23T17:23:05.070Z","reading":["CO2"],"satellite":["AIRS"]}' \
+  -d '{"geo":[[-71.1043443253471,-42.3150676015829],[71.1043443253471,-42.3150676015829],[71.1043443253471,42.3150676015829],[-71.1043443253471,42.3150676015829],[-71.1043443253471,-42.3150676015829]],"from_time":"2016-08-23T17:23:05.070Z","to_time":"2016-08-23T17:23:05.070Z","data_fields":["CO2ret"],"satellite":["AIRS"]}' \
   https://endpoint.example.com/skyapi
 ```
 
-### Level 3 Return Format
+### Level 2 Return Format
 
-- root response: array of reading time periods
-  - from_time: start of readings to average
-  - end_time: end of readings to average
-  - regions: an array of readings
-    - readings: an object keyed by the requested spectroscopy readings
-    - geo: a (latitude, longitude) pair which is represents the center of the reading.
+- root response: array of readings
+  - time: time of the reading
+  - point: a (latitude, longitude) pair representing the center of the reading
+  - data_fields: an object of field ids
+    - $field_id: an object keyed by the requested data fields
 
 ```json
 [{
-	"from_time": "2016-07-23T17:23:05.070Z",
-	"to_time": "2016-07-23T17:23:05.070Z",
-	"regions": [{
-		"geo": [-71.1043443253471, -42.3150676015829],
-		"readings": {
-			"CO2": 50,
-			"CH4": 50
-		}
-	}, {
-		"geo": [-71.1043443253471, -42.3150676015829],
-		"readings": {
-			"CO2": 49,
-			"CH4": 51
-		}
-	}]
-}, {
-	"from_time": "2016-08-23T17:23:05.070Z",
-	"to_time": "2016-08-23T17:23:05.070Z",
-	"regions": [{
-		"geo": [-71.1043443253471, -42.3150676015829],
-		"readings": {
-			"CO2": 50,
-			"CH4": 50
-		}
-	}, {
-		"geo": [-71.1043443253471, -42.3150676015829],
-		"readings": {
-			"CO2": 49,
-			"CH4": 51
-		}
-	}]
+	"time": "2016-07-31T23:00:00.000Z",
+	"point": [27.53, 36.41],
+	"data_fields": {
+    "CO2ret": 401.142
+	}
 }]
 ```
 
