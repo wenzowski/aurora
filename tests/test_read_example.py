@@ -6,7 +6,11 @@ import numpy
 def mnt():
     import h5pyd as h5py
     # there is one public/ folder at the root path
-    return h5py.File('/', 'r', endpoint='http://localhost:5000')
+    return h5py.File(
+        'skyapi.wenzowski.com',  # default `host` domain
+        'r',
+        endpoint='http://localhost:5000'
+    )
 
 
 @pytest.fixture
@@ -17,7 +21,7 @@ def tall_file(mnt):
 
 # WARN mnt.id.id is volatile: changes with every h5serv index operation
 def test_mountpoint(mnt):
-    assert mnt.filename == '/'
+    assert mnt.filename == 'skyapi.wenzowski.com'  # default `host` domain
     assert mnt.name == '/'
     assert mnt.id.id == 'ba88a35e-6e23-11e6-a230-04016789eb01'
     assert len(mnt) == 1
