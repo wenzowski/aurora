@@ -117,9 +117,10 @@ curl -X POST \
 
 start h5serv before running tests
 ```bash
-python app.py --domain=skyapi.wenzowski.com
+sudo docker run -p 5000:5000 -d -v `pwd`/tests/data:/data splacorn/h5serv:aac69032aa9abd596e9ea7897372d86472d9be0d --domain=skyapi.wenzowski.com
 ```
 
+then run tests
 ```bash
-pytest tests/*.py
+pytest
 ```
