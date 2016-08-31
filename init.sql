@@ -1,9 +1,5 @@
-CREATE USER skyapi_development_user WITH PASSWORD 'pleasefortheloveofspaghettichangeme';
-CREATE DATABASE skyapi_development;
-GRANT ALL PRIVILEGES ON DATABASE skyapi_development to skyapi_development_user;
-\connect skyapi_development;
-CREATE EXTENSION postgis;
-CREATE EXTENSION hstore;
+# connect to existing database using credentials of db owner
+# psql -f ./init.sql -U skyapi_development_user -h 127.0.0.1 skyapi_development
 CREATE TABLE level_2_data (
   id SERIAL PRIMARY KEY,
   time TIMESTAMP WITHOUT TIME ZONE,
