@@ -1,13 +1,13 @@
 import pytest
-import h5py
 import numpy
 from os.path import abspath
+from co2 import open_h5_reader, cast_tai_to_utc_string, extract_co2_data_fields
 
 
 @pytest.fixture
 def airs_file():
-    path = 'tests/data/public/AIRS.2016.05.31.240.L2.CO2_Std_IR.v5.4.11.0.CO2.T16160193514.h5'  # noqa
-    return h5py.File(abspath(path), 'r')
+    path = abspath('tests/data/public/AIRS.2016.05.31.240.L2.CO2_Std_IR.v5.4.11.0.CO2.T16160193514.h5')  # noqa
+    return open_h5_reader(path)
 
 
 def test_co2_groups_exist(airs_file):
@@ -17,29 +17,14 @@ def test_co2_groups_exist(airs_file):
     ]
 
 
+def test_cast_tai_to_utc_string():
+    assert cast_tai_to_utc_string(7.388928e+08) == '2016-06-01T00:00:00.000Z'
+
+
 def test_co2_can_be_read(airs_file):
-    readings = []
-    avg_kern = airs_file['/CO2/Data Fields/AvgKern']
-    co2_ret = airs_file['/CO2/Data Fields/CO2ret']
-    co2_std = airs_file['/CO2/Data Fields/CO2std']
-    lat = airs_file['/CO2/Geolocation Fields/Latitude']
-    lon = airs_file['/CO2/Geolocation Fields/Longitude']
-    time = airs_file['/CO2/Geolocation Fields/Time']
-    for x in range(co2_ret.shape[0]):
-        for y in range(co2_ret.shape[1]):
-            reading = co2_ret[x][y]
-            if reading != -9999.0:
-                readings.append({
-                    'time': time[x][y],
-                    'point': [lat[x][y], lon[x][y]],
-                    'data_fields': {
-                        'avg_kern': avg_kern[x][y].flatten(),
-                        'co2_ret': co2_ret[x][y],
-                        'co2_std': co2_std[x][y]
-                    }
-                })
+    readings = extract_co2_data_fields(airs_file)
     expected = {
-        'time': 7.388928e+08,
+        'time': '2016-06-01T00:00:00.000Z',
         'point': [29.219999, 24.93],
         'data_fields': {
             'avg_kern': [1.29526801e-04],  # 100-element list
@@ -47,7 +32,7 @@ def test_co2_can_be_read(airs_file):
             'co2_std': 1.806
         }
     }
-    assert numpy.isclose(readings[0]['time'], expected['time'])
+    assert readings[0]['time'] == expected['time']
     assert numpy.isclose(readings[0]['point'][0], expected['point'][0])
     assert numpy.isclose(readings[0]['point'][1], expected['point'][1])
     assert numpy.isclose(

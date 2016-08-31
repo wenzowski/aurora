@@ -23,19 +23,19 @@ def tall_file(mnt):
 def test_mountpoint(mnt):
     assert mnt.filename == 'skyapi.wenzowski.com'  # default `host` domain
     assert mnt.name == '/'
-    assert mnt.id.id == 'ba88a35e-6e23-11e6-a230-04016789eb01'
+    assert mnt.id.id == '676e6d84-6ef0-11e6-971e-0242ac110002'
     assert len(mnt) == 1
     assert [key for key in mnt] == ['public']
 
 
 def test_folders_can_be_opened_by_relative_path(mnt):
     public_folder = mnt['public']
-    assert public_folder.id.id == 'ba88a35f-6e23-11e6-a230-04016789eb01'
+    assert public_folder.id.id == '676f80e8-6ef0-11e6-971e-0242ac110002'
 
 
 def test_folders_can_be_opened_by_absolute_path(mnt):
     public_folder = mnt['/public']
-    assert public_folder.id.id == 'ba88a35f-6e23-11e6-a230-04016789eb01'
+    assert public_folder.id.id == '676f80e8-6ef0-11e6-971e-0242ac110002'
 
 
 def test_files_can_be_opened_by_relative_path(mnt):
@@ -61,8 +61,12 @@ def test_list_folders(mnt):
 
 def test_list_files(mnt):
     public_folder = mnt['/public']
-    assert len(public_folder) == 1
-    assert [key for key in public_folder] == ['tall']
+    assert len(public_folder) == 3
+    assert [key for key in public_folder] == [
+        'AIRS.2016.05.31.240.L2.CO2_Std_IR.v5.4.11.0.CO2.T16160193514',
+        'tall',
+        'AIRS.2016.05.31.239.L2.CO2_Std_IR.v5.4.11.0.CO2.T16160193438'
+    ]
 
 
 def test_top_level_group_in_file_has_no_filename_attribute(tall_file):

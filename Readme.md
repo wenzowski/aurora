@@ -1,5 +1,8 @@
 # Sky API
 
+### Where did we get the AIRS data?
+http://airsl2.gesdisc.eosdis.nasa.gov/data/Aqua_AIRS_Level2/AIRS2SPC.005/
+
 ### How are the points aligned to coordinates? (top left or center)
 [AIRS Level 3 Readme](http://acdisc.gesdisc.eosdis.nasa.gov/data/Aqua_AIRS_Level3/AIRS3C2M.005/doc/AIRS_V5_Tropospheric_CO2_Products.pdf)
 
@@ -86,11 +89,17 @@ curl -X POST \
 }]
 ```
 
+## Getting Data
+
+```bash
+wget -q -nH -nd http://airsl2.gesdisc.eosdis.nasa.gov/data/Aqua_AIRS_Level2/AIRS2STC.005/2016/152/ -O - | grep hdf\" | cut -f4 -d\" | xargs -I{} sh -c "wget http://airsl2.gesdisc.eosdis.nasa.gov/data/Aqua_AIRS_Level2/AIRS2STC.005/2016/152/{}"
+```
+
 ## Testing
 
 start h5serv before running tests
 ```bash
-sudo docker run -p 5000:5000 -d -v `pwd`/tests/data:/data splacorn/h5serv:aac69032aa9abd596e9ea7897372d86472d9be0d --domain=skyapi.wenzowski.com
+docker run -it -p 5000:5000 -v `pwd`/tests/data:/data splacorn/h5serv:aac69032aa9abd596e9ea7897372d86472d9be0d --domain=skyapi.wenzowski.com
 ```
 
 then run tests
