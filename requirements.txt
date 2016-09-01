@@ -4,3 +4,4 @@ h5preserve==0.8
 h5py==2.6.0
 numpy==1.11.1
 six==1.10.0
+psycopg2==2.6.2

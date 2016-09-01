@@ -1,5 +1,12 @@
 # Sky API
 
+###Installation
+```bash
+apt-get install -y postgis
+apt-get install build-dep
+```
+
+
 ### Where did we get the AIRS data?
 http://airsl2.gesdisc.eosdis.nasa.gov/data/Aqua_AIRS_Level2/AIRS2SPC.005/
 
