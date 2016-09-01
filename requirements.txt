@@ -1,3 +1,4 @@
+cython==0.24.1
 git+https://github.com/HDFGroup/h5pyd.git
 requests==2.11.1
 h5preserve==0.8
@@ -5,3 +6,4 @@ h5py==2.6.0
 numpy==1.11.1
 six==1.10.0
 psycopg2==2.6.2
+psycopg-postgis==0.1.2

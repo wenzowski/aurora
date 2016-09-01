@@ -1,6 +1,7 @@
 import pytest
 from db import (
     db_connect,
+    db_cursor,
     format_sql_time,
     format_sql_point,
     format_sql_data_fields,
@@ -9,6 +10,7 @@ from db import (
     insert_row
 )
 import datetime
+from postgis import Point
 
 
 @pytest.fixture
@@ -24,11 +26,6 @@ def config():
 @pytest.fixture
 def db_connection(config):
     return db_connect(config)
-
-
-@pytest.fixture
-def db_cursor(db_connection):
-    return db_connection.cursor()
 
 
 @pytest.fixture
@@ -52,7 +49,7 @@ def test_db_connect(config):
 
 
 # TODO: check column type of point & data
-def test_has_level_2_data_table(db_cursor):
+def test_has_level_2_data_table(db_connection):
     sql = '''
     SELECT column_name, data_type
     FROM information_schema.columns
@@ -61,8 +58,9 @@ def test_has_level_2_data_table(db_cursor):
     #  sql = '''
     #  SELECT level_2_data FROM sky_dai_test;
     #  '''
-    db_cursor.execute(sql)
-    result = db_cursor.fetchall()
+    cursor = db_cursor(db_connection)
+    cursor.execute(sql)
+    result = cursor.fetchall()
     # assert result == [
     #     ('id', 'integer'),
     #     ('time', 'timestamp without time zone'),
@@ -129,17 +127,18 @@ def test_format_sql(extracted_co2_data_fields):
 #  https://github.com/yohanboniface/psycopg-postgis
 #  https://github.com/geoalchemy/geoalchemy2
 def test_insert_row(db_connection, extracted_co2_data_fields):
-    import psycopg2.extras
     assert insert_row(db_connection, extracted_co2_data_fields) is True
     sql_select = 'SELECT time, point, data_fields FROM level_2_data LIMIT 1'
-    db_cursor = db_connection.cursor()
-    psycopg2.extras.register_hstore(db_cursor)
-    db_cursor.execute(sql_select)
-    result = db_cursor.fetchall()
+    cursor = db_cursor(db_connection)
+    cursor.execute(sql_select)
+    result = cursor.fetchall()
     assert result == [
         (
-            datetime.datetime(2016, 6, 1, 0, 0),
-            '0101000020E6100000AE47E17A14EE38401827BEDA51383D40',
+            datetime.datetime.strptime(
+                '2016-06-01T00:00:00Z',
+                '%Y-%m-%dT%H:%M:%SZ'
+            ),
+            Point(24.93, 29.219999),
             {
                 'avg_kern': 'ARRAY[0.000129526801]',
                 'co2_ret': '411.54401',
