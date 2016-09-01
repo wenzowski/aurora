@@ -8,7 +8,5 @@ CREATE DATABASE skyapi_test;
 GRANT ALL PRIVILEGES ON DATABASE skyapi_test to skyapi_test_user;
 \c skyapi_test
 CREATE EXTENSION postgis;
-CREATE EXTENSION hstore;
 \c skyapi_development
 CREATE EXTENSION postgis;
-CREATE EXTENSION hstore;

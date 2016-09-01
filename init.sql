@@ -5,6 +5,6 @@ CREATE TABLE level_2_data (
   id SERIAL PRIMARY KEY,
   time TIMESTAMP WITHOUT TIME ZONE,
   point GEOMETRY(Geometry,4326),
-  data_fields HSTORE
+  data_fields JSONB
 );
 -- still need compound index level_2_data_time_point

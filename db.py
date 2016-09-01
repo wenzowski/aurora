@@ -1,6 +1,12 @@
 import psycopg2
 import psycopg2.extras
 import postgis
+from postgis import Point
+
+
+psycopg2.extensions.register_adapter(
+    dict, psycopg2.extras.Json
+)
 
 
 def db_connect(config):
@@ -9,35 +15,16 @@ def db_connect(config):
 
 def db_cursor(db_connection):
     cursor = db_connection.cursor()
-    psycopg2.extras.register_hstore(cursor)
     postgis.register(cursor)
     return cursor
 
 
-def format_sql_time(time):
-    return ("%s", time)
-
-
 def format_sql_point(point):
-    return (
-        'ST_SetSRID(ST_Point(%s, %s),4326)',
-        point[1],
-        point[0]
-    )
+    return Point(point[1], point[0], srid=4326)
 
 
 def format_sql_data_fields(data_fields):
-    format_string_items = []
-    data_values = []
-    for k, v in sorted(data_fields.items()):
-        format_string_items.append('"'+k+'" => "%s"')
-        data_values.append(v)
-    format_string = ','.join(format_string_items)
-    format_string = "'" + format_string + "'"
-    return (
-        format_string,
-        *data_values
-    )
+    return data_fields
 
 
 def format_sql(time='', point=[], data_fields={}):
@@ -47,24 +34,13 @@ def format_sql(time='', point=[], data_fields={}):
         raise ValueError('point is required')
     if data_fields == {}:
         raise ValueError('data_fields is required')
-    sql_time_format, *sql_time_values = format_sql_time(time)
-    sql_point_format, *sql_point_values = format_sql_point(point)
-    sql_data_fields_format, *sql_data_fields_values = format_sql_data_fields(
-        data_fields
-    )
-    format_string = \
-        'INSERT INTO level_2_data (time, point, data_fields)' + \
-        'VALUES (' + \
-        sql_time_format + ',' + \
-        sql_point_format + ',' + \
-        sql_data_fields_format + \
-        ');'
     return (
-        format_string,
+        'INSERT INTO level_2_data (time, point, data_fields)'
+        'VALUES (%s, %s, %s);',
         (
-            *sql_time_values,
-            *sql_point_values,
-            *sql_data_fields_values
+            time,
+            format_sql_point(point),
+            format_sql_data_fields(data_fields)
         )
     )
 
