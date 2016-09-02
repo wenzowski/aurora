@@ -1,6 +1,7 @@
 import pytest
 from db import (
     SortedJson,
+    import_co2_data,
     db_connect,
     db_cursor,
     format_sql_point,
@@ -9,6 +10,7 @@ from db import (
     insert_rows,
     insert_row
 )
+import numpy
 import datetime
 from postgis import Point
 
@@ -34,11 +36,19 @@ def extracted_co2_data_fields():
         'time': '2016-06-01T00:00:00.000Z',
         'point': [29.219999, 24.93],
         'data_fields': {
-            'avg_kern': [1.29526801e-04],  # 100-element list
+            'avg_kern': numpy.array([1.29526801e-04], dtype='float32'),  # 100-element list
             'co2_ret': 411.54401,
             'co2_std': 1.806
         }
     }
+
+
+def test_import_co2_data(db_connection):
+    h5_path = 'tests/data/AIRS.2016.05.31.240.L2.CO2_Std_IR.v5.4.11.0.CO2.T16160193514.h5'  # noqa
+    inserted_ids = import_co2_data(db_connection, h5_path)
+    assert type(inserted_ids) is list
+    for id in inserted_ids:
+        assert type(id) is int
 
 
 def test_db_connect(config):
@@ -82,19 +92,23 @@ def test_format_sql_data_fields(extracted_co2_data_fields):
 
 def test_format_sql(db_connection, extracted_co2_data_fields):
     cursor = db_cursor(db_connection)
-    sql_template, sql_values = format_sql(**extracted_co2_data_fields)
+    sql_template = \
+        'INSERT INTO level_2_data (time, point, data_fields)' + \
+        'VALUES (%s, %s, %s) RETURNING id;'
+    sql_values = format_sql(**extracted_co2_data_fields)
     sql = cursor.mogrify(sql_template, sql_values)
-    assert sql == b'INSERT INTO level_2_data (time, point, data_fields)VALUES (\'2016-06-01T00:00:00.000Z\', ST_GeometryFromText(\'POINT(24.93 29.219999)\', 4326), \'{"avg_kern": [0.000129526801], "co2_ret": 411.54401, "co2_std": 1.806}\');'  # noqa
+    assert sql == b'INSERT INTO level_2_data (time, point, data_fields)VALUES (\'2016-06-01T00:00:00.000Z\', ST_GeometryFromText(\'POINT(24.93 29.219999)\', 4326), \'{"avg_kern": [0.00012952680117450655], "co2_ret": 411.54401, "co2_std": 1.806}\') RETURNING id;'  # noqa
 
 
 #  options:
 #  https://github.com/yohanboniface/psycopg-postgis
 #  https://github.com/geoalchemy/geoalchemy2
 def test_insert_row(db_connection, extracted_co2_data_fields):
-    assert insert_row(db_connection, extracted_co2_data_fields) is True
-    sql_select = 'SELECT time, point, data_fields FROM level_2_data LIMIT 1'
+    id = insert_row(db_connection, extracted_co2_data_fields)
+    assert type(id) is int
+    sql_select = 'SELECT time, point, data_fields FROM level_2_data WHERE id = %s LIMIT 1'
     cursor = db_cursor(db_connection)
-    cursor.execute(sql_select)
+    cursor.execute(sql_select, (id,))
     result = cursor.fetchall()
     assert result == [
         (
@@ -104,7 +118,7 @@ def test_insert_row(db_connection, extracted_co2_data_fields):
             ),
             Point(24.93, 29.219999),
             {
-                'avg_kern': [0.000129526801],
+                'avg_kern': [0.00012952680117450655],
                 'co2_ret': 411.54401,
                 'co2_std': 1.806
             }
@@ -117,4 +131,25 @@ def test_insert_rows(db_connection, extracted_co2_data_fields):
         extracted_co2_data_fields,
         extracted_co2_data_fields
     ]
-    assert insert_rows(db_connection, fields_list) is True
+    inserted_ids = insert_rows(db_connection, fields_list)
+    assert type(inserted_ids) is list
+    for id in inserted_ids:
+        assert type(id) is int
+        sql_select = 'SELECT time, point, data_fields FROM level_2_data WHERE id = %s LIMIT 1'
+        cursor = db_cursor(db_connection)
+        cursor.execute(sql_select, (id,))
+        result = cursor.fetchall()
+        assert result == [
+            (
+                datetime.datetime.strptime(
+                    '2016-06-01T00:00:00Z',
+                    '%Y-%m-%dT%H:%M:%SZ'
+                ),
+                Point(24.93, 29.219999),
+                {
+                    'avg_kern': [0.00012952680117450655],
+                    'co2_ret': 411.54401,
+                    'co2_std': 1.806
+                }
+            )
+        ]

@@ -21,7 +21,7 @@ def test_cast_tai_to_utc_string():
     assert cast_tai_to_utc_string(7.388928e+08) == '2016-06-01T00:00:00.000Z'
 
 
-def test_co2_can_be_read(airs_file):
+def test_extract_co2_data_fields(airs_file):
     readings = extract_co2_data_fields(airs_file)
     expected = {
         'time': '2016-06-01T00:00:00.000Z',

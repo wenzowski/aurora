@@ -3,6 +3,20 @@ import psycopg2.extras
 import postgis
 from postgis import Point
 import json
+import decimal
+import numpy
+from os.path import abspath
+from co2 import (
+    open_h5_reader,
+    extract_co2_data_fields
+)
+
+
+def import_co2_data(db_connection, h5_path):
+    path = abspath(h5_path)
+    airs_file = open_h5_reader(path)
+    fields_list = extract_co2_data_fields(airs_file)
+    return insert_rows(db_connection, fields_list)
 
 
 psycopg2.extensions.register_adapter(
@@ -24,9 +38,18 @@ def format_sql_point(point):
     return Point(point[1], point[0], srid=4326)
 
 
+class DbEncoder(json.JSONEncoder):
+    def default(self, o):
+        if isinstance(o, decimal.Decimal):
+            return float(o)  # shouldn't we rangeerror or something?
+        if isinstance(o, (numpy.ndarray, numpy.generic)):
+            return o.tolist()
+        return super(DbEncoder, self).default(o)
+
+
 class SortedJson(psycopg2.extras.Json):
     def dumps(self, obj):
-        return json.dumps(obj, sort_keys=True)
+        return json.dumps(obj, sort_keys=True, cls=DbEncoder)
 
 
 def format_sql_data_fields(data_fields):
@@ -41,29 +64,35 @@ def format_sql(time='', point=[], data_fields={}):
     if data_fields == {}:
         raise ValueError('data_fields is required')
     return (
-        'INSERT INTO level_2_data (time, point, data_fields)'
-        'VALUES (%s, %s, %s);',
-        (
-            time,
-            format_sql_point(point),
-            format_sql_data_fields(data_fields)
-        )
+        time,
+        format_sql_point(point),
+        format_sql_data_fields(data_fields)
     )
 
 
 def insert_row(db_connection, fields):
-    sql_format, sql_values = format_sql(**fields)
+    sql_format = \
+        'INSERT INTO level_2_data (time, point, data_fields) ' + \
+        'VALUES (%s, %s, %s) RETURNING id;'
+    sql_values = format_sql(**fields)
     cursor = db_cursor(db_connection)
     cursor.execute(sql_format, sql_values)
+    id = cursor.fetchone()[0]
     db_connection.commit()
-    return True
+    return id
 
 
 def insert_rows(db_connection, fields_list):
+    inserts_format = ','.join(('(%s,%s,%s)' for x in fields_list))
+    sql_format = \
+        'INSERT INTO level_2_data (time, point, data_fields) ' + \
+        'VALUES ' + inserts_format + ' RETURNING id;'
     cursor = db_cursor(db_connection)
-    cursor = db_connection.cursor()
+    values_list = []
     for fields in fields_list:
-        sql_format, sql_values = format_sql(**fields)
-        cursor.execute(sql_format, sql_values)
+        for value in format_sql(**fields):
+            values_list.append(value)
+    cursor.execute(sql_format, values_list)
+    ids = cursor.fetchall()
     db_connection.commit()
-    return True
+    return [id[0] for id in ids]
