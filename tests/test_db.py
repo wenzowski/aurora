@@ -1,5 +1,6 @@
 import pytest
 from db import (
+    SortedJson,
     db_connect,
     db_cursor,
     format_sql_point,
@@ -76,16 +77,14 @@ def test_format_sql_point(extracted_co2_data_fields):
 def test_format_sql_data_fields(extracted_co2_data_fields):
     data_fields = extracted_co2_data_fields['data_fields']
     sql_data_fields = format_sql_data_fields(data_fields)
-    assert sql_data_fields == data_fields  # post monkey-patch
+    assert type(sql_data_fields) == SortedJson
 
 
-# can't test because of inconsistent dict order
-@pytest.mark.skip
 def test_format_sql(db_connection, extracted_co2_data_fields):
     cursor = db_cursor(db_connection)
     sql_template, sql_values = format_sql(**extracted_co2_data_fields)
     sql = cursor.mogrify(sql_template, sql_values)
-    assert sql == 'INSERT INTO level_2_data (time, point, data_fields)VALUES (\'2016-06-01T00:00:00.000Z\', ST_GeometryFromText(\'POINT(24.93 29.219999)\', 4326), \'{"avg_kern": [0.000129526801], "co2_ret": 411.54401, "co2_std": 1.806}\');'  # noqa
+    assert sql == b'INSERT INTO level_2_data (time, point, data_fields)VALUES (\'2016-06-01T00:00:00.000Z\', ST_GeometryFromText(\'POINT(24.93 29.219999)\', 4326), \'{"avg_kern": [0.000129526801], "co2_ret": 411.54401, "co2_std": 1.806}\');'  # noqa
 
 
 #  options:

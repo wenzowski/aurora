@@ -2,6 +2,7 @@ import psycopg2
 import psycopg2.extras
 import postgis
 from postgis import Point
+import json
 
 
 psycopg2.extensions.register_adapter(
@@ -23,8 +24,13 @@ def format_sql_point(point):
     return Point(point[1], point[0], srid=4326)
 
 
+class SortedJson(psycopg2.extras.Json):
+    def dumps(self, obj):
+        return json.dumps(obj, sort_keys=True)
+
+
 def format_sql_data_fields(data_fields):
-    return data_fields
+    return SortedJson(data_fields)
 
 
 def format_sql(time='', point=[], data_fields={}):
