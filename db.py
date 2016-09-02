@@ -5,18 +5,11 @@ from postgis import Point
 import json
 import decimal
 import numpy
-from os.path import abspath
+import os.path
 from co2 import (
     open_h5_reader,
     extract_co2_data_fields
 )
-
-
-def import_co2_data(db_connection, h5_path):
-    path = abspath(h5_path)
-    airs_file = open_h5_reader(path)
-    fields_list = extract_co2_data_fields(airs_file)
-    return insert_rows(db_connection, fields_list)
 
 
 psycopg2.extensions.register_adapter(
@@ -32,6 +25,21 @@ def db_cursor(db_connection):
     cursor = db_connection.cursor()
     postgis.register(cursor)
     return cursor
+
+
+def check_is_dataset_imported(db_connection, filename):
+    sql = 'SELECT EXISTS(SELECT 1 FROM imported_files WHERE filename=%s)'
+    cursor = db_cursor(db_connection)
+    cursor.execute(sql, (filename,))
+    return cursor.fetchone()[0]
+
+
+def begin_import(db_connection, filename):
+    sql = 'INSERT INTO imported_files (filename) ' + \
+        'VALUES (%s) RETURNING id;'
+    cursor = db_cursor(db_connection)
+    cursor.execute(sql, (filename,))
+    return cursor.fetchone()[0]  # note: still need to commit()
 
 
 def format_sql_point(point):
@@ -70,11 +78,12 @@ def format_sql(time='', point=[], data_fields={}):
     )
 
 
-def insert_row(db_connection, fields):
+def insert_row(db_connection, file_id, fields):
     sql_format = \
-        'INSERT INTO level_2_data (time, point, data_fields) ' + \
-        'VALUES (%s, %s, %s) RETURNING id;'
-    sql_values = format_sql(**fields)
+        'INSERT INTO level_2_data (file_id, time, point, data_fields) ' + \
+        'VALUES (%s, %s, %s, %s) RETURNING id;'
+    time, point, data_fields = format_sql(**fields)
+    sql_values = (file_id, time, point, data_fields)
     cursor = db_cursor(db_connection)
     cursor.execute(sql_format, sql_values)
     id = cursor.fetchone()[0]
@@ -82,17 +91,27 @@ def insert_row(db_connection, fields):
     return id
 
 
-def insert_rows(db_connection, fields_list):
-    inserts_format = ','.join(('(%s,%s,%s)' for x in fields_list))
+def insert_rows(db_connection, filename, fields_list):
+    file_id = begin_import(db_connection, filename)
+    inserts_format = ','.join(('(%s,%s,%s,%s)' for x in fields_list))
     sql_format = \
-        'INSERT INTO level_2_data (time, point, data_fields) ' + \
+        'INSERT INTO level_2_data (file_id, time, point, data_fields) ' + \
         'VALUES ' + inserts_format + ' RETURNING id;'
     cursor = db_cursor(db_connection)
     values_list = []
     for fields in fields_list:
+        values_list.append(file_id)
         for value in format_sql(**fields):
             values_list.append(value)
     cursor.execute(sql_format, values_list)
     ids = cursor.fetchall()
     db_connection.commit()
     return [id[0] for id in ids]
+
+
+def import_co2_data(db_connection, h5_path):
+    path = os.path.abspath(h5_path)
+    file_name = os.path.basename(h5_path)
+    airs_file = open_h5_reader(path)
+    fields_list = extract_co2_data_fields(airs_file)
+    return insert_rows(db_connection, file_name, fields_list)
