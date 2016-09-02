@@ -1,6 +1,8 @@
 import pytest
 from db import (
     SortedJson,
+    get_file,
+    read_co2_data,
     db_connect,
     db_cursor,
     format_sql_point,
@@ -9,6 +11,7 @@ from db import (
     insert_rows,
     insert_row
 )
+import numpy
 import datetime
 from postgis import Point
 
@@ -40,6 +43,30 @@ def extracted_co2_data_fields():
         }
     }
 
+#  seems like the server is offline? host is not reachable
+#  also numpy is imported in the db.py file
+
+
+#@pytest.mark.skip
+def test_get_co2_data():
+    readings = get_file('tests/data/public/AIRS.2016.05.31.240.L2.CO2_Std_IR.v5.4.11.0.CO2.T16160193514')
+    co2 = readings['/CO2']
+    assert [key for key in co2] == [
+        'Data Fields', 'Geolocation Fields', 'Swath Attributes'
+    ]
+    #expected = {
+    #    'time': '2016-06-01T00:00:00.000Z',
+    #    'point': [29.219999, 24.93],
+    #    'data_fields': {
+    #        'avg_kern': [1.29526801e-04],  # 100-element list
+    #        'co2_ret': 411.54401,
+    #        'co2_std': 1.806
+    #    }
+    #}
+    #assert numpy.isclose(
+    #   readings[0]['data_fields']['avg_kern'][0],
+    #   expected['data_fields']['avg_kern'][0]
+    #)
 
 def test_db_connect(config):
     from psycopg2.extensions import connection

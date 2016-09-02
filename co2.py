@@ -1,7 +1,6 @@
 import h5py
 import calendar
 import datetime
-#  import numpy
 
 
 def open_h5_reader(absolute_path):
