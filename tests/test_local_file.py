@@ -6,7 +6,7 @@ from co2 import open_h5_reader, cast_tai_to_utc_string, extract_co2_data_fields
 
 @pytest.fixture
 def airs_file():
-    path = abspath('tests/data/public/AIRS.2016.05.31.240.L2.CO2_Std_IR.v5.4.11.0.CO2.T16160193514.h5')  # noqa
+    path = abspath('tests/data/AIRS.2016.05.31.240.L2.CO2_Std_IR.v5.4.11.0.CO2.T16160193514.h5')  # noqa
     return open_h5_reader(path)
 
 

@@ -104,12 +104,6 @@ wget -q -nH -nd http://airsl2.gesdisc.eosdis.nasa.gov/data/Aqua_AIRS_Level2/AIRS
 
 ## Testing
 
-start h5serv before running tests
-```bash
-docker run -it -p 5000:5000 -v `pwd`/tests/data:/data splacorn/h5serv:aac69032aa9abd596e9ea7897372d86472d9be0d --domain=skyapi.wenzowski.com
-```
-
-then run tests
 ```bash
 pytest
 ```
