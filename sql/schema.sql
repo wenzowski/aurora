@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS imported_files (
   id serial PRIMARY KEY,
   filename text NOT NULL
 );
-CREATE UNIQUE INDEX imported_filename_index ON imported_files (filename);
+CREATE UNIQUE INDEX IF NOT EXISTS imported_filename_index ON imported_files (filename);
 
 CREATE TABLE IF NOT EXISTS level_2_data (
   id serial PRIMARY KEY,
