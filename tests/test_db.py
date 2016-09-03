@@ -10,7 +10,8 @@ from db import (
     format_sql_data_fields,
     format_sql,
     insert_rows,
-    insert_row
+    insert_row,
+    query_level_2_data
 )
 import numpy
 import datetime
@@ -190,3 +191,26 @@ def test_import_co2_data(db_connection):
     assert type(inserted_ids) is list
     for id in inserted_ids:
         assert type(id) is int
+
+
+def test_query_level_2_data(db_connection):
+    lat_lon_list = [
+        [18.87, 21.61],
+        [18.87, 21.63],
+        [18.89, 21.63],
+        [18.89, 21.61],
+        [18.87, 21.61]
+    ]
+    from_time = '2016-06-01T00:03:00Z'
+    to_time = '2016-06-01T00:04:00Z'
+    result = query_level_2_data(db_connection, lat_lon_list, from_time, to_time)[0]
+    assert isinstance(result[0], int)
+    assert isinstance(result[1], int)
+    assert result[2] == datetime.datetime.strptime(
+        '2016-06-01T00:03:12Z',
+        '%Y-%m-%dT%H:%M:%SZ'
+    )
+    assert result[3] == Point(21.62, 18.88)
+    assert type(result[4]['avg_kern']) == list
+    assert result[4]['co2_ret'] == 399.656005859375
+    assert result[4]['co2_std'] == 1.2239999771118164

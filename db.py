@@ -1,7 +1,6 @@
 import psycopg2
 import psycopg2.extras
 import postgis
-from postgis import Point
 import json
 import decimal
 import numpy
@@ -43,7 +42,7 @@ def begin_import(db_connection, filename):
 
 
 def format_sql_point(point):
-    return Point(point[1], point[0], srid=4326)
+    return postgis.Point(point[1], point[0], srid=4326)
 
 
 class DbEncoder(json.JSONEncoder):
@@ -115,3 +114,21 @@ def import_co2_data(db_connection, h5_path):
     airs_file = open_h5_reader(path)
     fields_list = extract_co2_data_fields(airs_file)
     return insert_rows(db_connection, file_name, fields_list)
+
+
+def query_level_2_data(db_connection, lat_lon_list, from_time, to_time):
+    sql_select = '''
+    SELECT id, file_id, time, point, data_fields
+    FROM level_2_data
+    WHERE ST_Within(point, ST_GeomFromText(%s)::geography::geometry)
+    AND time > %s
+    AND time < %s
+    LIMIT 1;
+    '''
+    cursor = db_cursor(db_connection)
+    lon_lat = ','.join(
+        (str(float(lon)) + ' ' + str(float(lat)) for lat, lon in lat_lon_list)
+    )
+    lon_lat_str = 'POLYGON(('+ lon_lat +'))'
+    cursor.execute(sql_select, (lon_lat_str, from_time, to_time))
+    return cursor.fetchall()
