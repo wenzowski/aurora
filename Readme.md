@@ -102,6 +102,7 @@ curl -X POST \
 wget -q -nH -nd http://airsl2.gesdisc.eosdis.nasa.gov/data/Aqua_AIRS_Level2/AIRS2STC.005/2016/152/ -O - | grep hdf\" | cut -f4 -d\" | xargs -I{} sh -c "wget http://airsl2.gesdisc.eosdis.nasa.gov/data/Aqua_AIRS_Level2/AIRS2STC.005/2016/152/{}"
 ls *.hdf | xargs -I{} sh -c "h4toh5 {}"
 rm *.hdf
+hug -f server.py -c import_data # actually import the data
 ```
 
 ## Testing

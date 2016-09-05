@@ -4,3 +4,4 @@ numpy==1.11.1
 psycopg-postgis==0.1.2
 psycopg2==2.6.2
 six==1.10.0
+hug==2.1.2

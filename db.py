@@ -92,6 +92,9 @@ def insert_row(db_connection, file_id, fields):
 
 def insert_rows(db_connection, filename, fields_list):
     file_id = begin_import(db_connection, filename)
+    if not fields_list:
+        db_connection.commit()
+        return []
     inserts_format = ','.join(('(%s,%s,%s,%s)' for x in fields_list))
     sql_format = \
         'INSERT INTO level_2_data (file_id, time, point, data_fields) ' + \
@@ -111,6 +114,8 @@ def insert_rows(db_connection, filename, fields_list):
 def import_co2_data(db_connection, h5_path):
     path = os.path.abspath(h5_path)
     file_name = os.path.basename(h5_path)
+    if check_is_dataset_imported(db_connection, file_name):
+        return False
     airs_file = open_h5_reader(path)
     fields_list = extract_co2_data_fields(airs_file)
     return insert_rows(db_connection, file_name, fields_list)

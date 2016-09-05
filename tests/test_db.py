@@ -184,6 +184,14 @@ def test_insert_rows(db_connection, extracted_co2_data_fields):
             )
         ]
 
+def test_insert_rows_with_no_data_fields(db_connection):
+    filename = 'insert.no.rows.h5'
+    fields_list = []
+    assert check_is_dataset_imported(db_connection, filename) == False
+    inserted_ids = insert_rows(db_connection, filename, fields_list)
+    assert inserted_ids == []
+    assert check_is_dataset_imported(db_connection, filename) == True
+
 
 def test_import_co2_data(db_connection):
     h5_path = 'tests/data/AIRS.2016.05.31.240.L2.CO2_Std_IR.v5.4.11.0.CO2.T16160193514.h5'  # noqa
