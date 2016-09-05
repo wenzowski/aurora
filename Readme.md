@@ -90,8 +90,8 @@ curl -X GET \
           ],
           "type":"Polygon"
         },
-        "from_time":"2016-08-23T17:23:05.070Z",
-        "to_time":"2016-08-23T17:23:05.070Z",
+        "from_time":"2016-06-01T00:03:00Z",
+        "to_time":"2016-06-01T00:04:00Z",
         "readings":["co2_ret"],
         "satellite":["AIRS"]
       }
