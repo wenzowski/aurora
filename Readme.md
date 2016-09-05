@@ -66,32 +66,57 @@ https://www2.acom.ucar.edu/mopitt/products
 
 ### Level 2 Call Format
 
-The API functions by posting JSON to an endpoint
-Geo queries are an array of [latitude, longitude] pairs.
-Dates are in ISO 8601 in UTC.
+The API relies on JSON query documents, which are escaped by the browser's
+`encodeURIComponent()` before being sent as a query variable.
+
+Query document structure:
+- `geo`: a [GeoJSON] document defining the area to return readings for.
+- `from_time`: an ISO 8601 string representing the start of the time period.
+- `to_time`: an ISO 8601 string representing the end of the time period.
+
+Note that while the GeoJSON coordinate system uses `[longitude, latitude, elevation]`,
+not all coordinate systems are [lonlat].
 
 ```bash
-curl -X POST \
+curl -X GET \
   -H "x-api-key: $API_KEY" \
   -H "Content-Type:application/json" \
-  -d '{"geo":[[-71.1043443253471,-42.3150676015829],[71.1043443253471,-42.3150676015829],[71.1043443253471,42.3150676015829],[-71.1043443253471,42.3150676015829],[-71.1043443253471,-42.3150676015829]],"from_time":"2016-08-23T17:23:05.070Z","to_time":"2016-08-23T17:23:05.070Z","data_fields":["CO2ret"],"satellite":["AIRS"]}' \
-  https://endpoint.example.com/skyapi
+  https://endpoint.example.com/points?query=`
+    node -e 'console.log(encodeURIComponent(JSON.stringify(
+      {
+        "geo": {
+          "coordinates": [
+            [21.61,18.87],[21.63,18.87],[21.63,18.89],[21.61,18.89],[21.61,18.87]
+          ],
+          "type":"Polygon"
+        },
+        "from_time":"2016-08-23T17:23:05.070Z",
+        "to_time":"2016-08-23T17:23:05.070Z",
+        "readings":["co2_ret"],
+        "satellite":["AIRS"]
+      }
+    )))'`
 ```
 
 ### Level 2 Return Format
 
 - root response: array of readings
-  - time: time of the reading
-  - point: a (latitude, longitude) pair representing the center of the reading
-  - data_fields: an object of field ids
-    - $field_id: an object keyed by the requested data fields
+  - `time`: time of the reading
+  - `geo`: a [GeoJSON] document defining the geographic reference for the reading.
+  - `readings`: an object of field ids
+    - `$field_id`: an object keyed by the requested data fields
 
 ```json
 [{
 	"time": "2016-07-31T23:00:00.000Z",
-	"point": [27.53, 36.41],
-	"data_fields": {
-    "CO2ret": 401.142
+	"geo": [
+    "coordinates": [
+      [21.62, 18.88]
+    ],
+    "type":"Point"
+  ],
+	"readings": {
+    "co2_ret": 401.142
 	}
 }]
 ```
@@ -110,3 +135,7 @@ hug -f server.py -c import_data # actually import the data
 ```bash
 pytest
 ```
+
+[GeoJSON]: http://geojson.org/geojson-spec.html
+[intro to GeoJSON]: http://www.macwright.org/2015/03/23/geojson-second-bite.html
+[lonlat]: http://www.macwright.org/lonlat/
