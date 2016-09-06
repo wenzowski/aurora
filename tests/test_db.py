@@ -12,7 +12,8 @@ from db import (
     format_sql,
     insert_rows,
     insert_row,
-    query_level_2_data
+    query_level_2_data_points,
+    query_level_2_data_mean
 )
 import numpy
 import datetime
@@ -203,19 +204,60 @@ def test_import_co2_data(db_connection):
         assert type(id) is int
 
 
-def test_query_level_2_data(db_connection):
+def test_query_level_2_data_points(db_connection):
     polygon_wkt = 'POLYGON((21.61 18.87, 21.63 18.87, 21.63 18.89, 21.61 18.89, 21.61 18.87))'  # noqa
     polygon = wkt.loads(polygon_wkt)
     from_time = '2016-06-01T00:03:00Z'
     to_time = '2016-06-01T00:04:00Z'
-    result = query_level_2_data(db_connection, polygon, from_time, to_time)[0]
-    assert isinstance(result[0], int)
-    assert isinstance(result[1], int)
-    assert result[2] == datetime.datetime.strptime(
+    results = query_level_2_data_points(
+        db_connection, polygon, from_time, to_time
+    )
+    assert isinstance(results, list)
+    result = results[0]
+    assert isinstance(result, dict)
+    assert result['time'] == datetime.datetime.strptime(
         '2016-06-01T00:03:12Z',
         '%Y-%m-%dT%H:%M:%SZ'
     )
-    assert result[3] == Point(21.62, 18.88)
-    assert type(result[4]['avg_kern']) == list
-    assert result[4]['co2_ret'] == 399.656005859375
-    assert result[4]['co2_std'] == 1.2239999771118164
+    assert result['geo'] == 'POINT(21.62 18.88)'
+    assert isinstance(result['data_fields'], dict)
+    assert result['data_fields']['co2_ret'] == 399.656005859375
+    assert result['data_fields']['co2_std'] == 1.2239999771118164
+    assert isinstance(result['data_fields']['avg_kern'], list)
+
+
+def test_query_level_2_data_mean(db_connection):
+    polygon_wkt = 'POLYGON((21.61 18.87, 21.63 18.87, 21.63 18.89, 21.61 18.89, 21.61 18.87))'  # noqa
+    polygon = wkt.loads(polygon_wkt)
+    from_time = '2016-06-01T00:03:00Z'
+    to_time = '2016-06-01T00:04:00Z'
+    data_fields = ['co2_ret', 'co2_std']
+    result = query_level_2_data_mean(
+        db_connection, polygon, from_time, to_time, data_fields
+    )
+    assert isinstance(result, dict)
+    assert isinstance(result['co2_ret'], float)
+    assert isinstance(result['co2_std'], float)
+    assert numpy.isclose(result['co2_ret'], 399.656005859375)
+    assert numpy.isclose(result['co2_std'], 1.2239999771118164)
+    # mean of entire table
+    # assert result == {
+    #     'co2_ret': 407.737299679687,
+    #     'co2_std': 1.5479999976635
+    # }
+
+
+def test_query_level_2_data_mean_with_no_result(db_connection):
+    polygon_wkt = 'POLYGON((21.61 18.87, 21.63 18.87, 21.63 18.89, 21.61 18.89, 21.61 18.87))'  # noqa
+    polygon = wkt.loads(polygon_wkt)
+    from_time = '2018-06-01T00:03:00Z'
+    to_time = '2018-06-01T00:04:00Z'
+    data_fields = ['co2_ret', 'co2_std']
+    result = query_level_2_data_mean(
+        db_connection, polygon, from_time, to_time, data_fields
+    )
+    assert isinstance(result, dict)
+    assert result == {
+        'co2_ret': None,
+        'co2_std': None
+    }

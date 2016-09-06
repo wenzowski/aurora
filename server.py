@@ -6,7 +6,8 @@ from urllib.parse import urlparse
 from db import (
     db_connect,
     import_co2_data,
-    query_level_2_data
+    query_level_2_data_points,
+    query_level_2_data_mean
 )
 
 print('Booting...')
@@ -34,17 +35,29 @@ def points(query):
     if not loaded['to_time']:
         return {'error': 'to_time was not provided'}
     polygon = wkt.loads(loaded['geo'])
-    records = query_level_2_data(
+    return query_level_2_data_points(
         db_connection,
         polygon,
         loaded['from_time'],
         loaded['to_time']
     )
-    return [{
-       'time': r[2],
-       'geo': 'POINT({} {})'.format(*r[3]),
-       'data_fields': r[4]
-    } for r in records]
+
+
+@hug.get(query=hug.input_format.json)
+def mean(query):
+    loaded = json.loads(query)
+    records = query_level_2_data_mean(
+        db_connection,
+        wkt.loads(loaded['geo']),
+        loaded['from_time'],
+        loaded['to_time'],
+        loaded['data_fields']
+    )
+    return {
+        'geo': loaded['geo'],
+        'time': '{}/{}'.format(loaded['from_time'], loaded['to_time']),
+        'data_fields': records
+    }
 
 
 @hug.cli(version='0.0.0')

@@ -122,16 +122,66 @@ def import_co2_data(db_connection, h5_path):
     return insert_rows(db_connection, file_name, fields_list)
 
 
-def query_level_2_data(db_connection, polygon, from_time, to_time):
+def query_level_2_data_points(db_connection, polygon, from_time, to_time):
+    fields = ['time', 'geo', 'data_fields']
     sql_select = '''
-    SELECT id, file_id, time, point, data_fields
+    SELECT time, ST_AsText(point) AS geo, data_fields
     FROM level_2_data
     WHERE ST_Within(point, ST_GeomFromText(%s)::geography::geometry)
     AND time > %s
     AND time < %s
-    LIMIT 1;
     '''
     cursor = db_cursor(db_connection)
     polygon_wkt = wkt.dumps(polygon)
     cursor.execute(sql_select, (polygon_wkt, from_time, to_time))
-    return cursor.fetchall()
+    results = cursor.fetchall()
+    return [
+        {field: result[i] for i, field in enumerate(fields)}
+        for result in results
+    ]
+
+
+def query_level_2_data_mean(db_connection, polygon, from_time, to_time, data_fields):  # noqa
+    cursor = db_cursor(db_connection)
+    safe_data_fields = [
+        cursor.mogrify('%s', (field,))[1:-1].decode('utf-8')
+        for field in data_fields
+    ]
+    sql_with_list = [
+        '''{}_rows AS (
+        SELECT data_fields::json->>%s
+        AS {}
+        FROM level_2_data
+        WHERE (data_fields ? %s)
+        AND time > %s
+        AND time < %s
+        AND ST_Within(point, ST_GeomFromText(%s)::geography::geometry)
+        )
+        '''.format(field, field)
+        for field in safe_data_fields
+    ]
+    sql_avg_list = [
+        'AVG(CAST({} AS FLOAT))'.format(field)
+        for field in safe_data_fields
+    ]
+    sql_from_list = [
+        '{}_rows'.format(field)
+        for field in safe_data_fields
+    ]
+    sql_with = ','.join(sql_with_list)
+    sql_avg = ','.join(sql_avg_list)
+    sql_from = ','.join(sql_from_list)
+    sql_query = 'WITH {} SELECT {} FROM {}'.format(
+        sql_with, sql_avg, sql_from
+    )
+    polygon_wkt = wkt.dumps(polygon)
+    values_list = []
+    for field in data_fields:
+        for i in range(2):
+            values_list.append(field)
+        values_list.append(from_time)
+        values_list.append(to_time)
+        values_list.append(polygon_wkt)
+    cursor.execute(sql_query, values_list)
+    result = cursor.fetchone()
+    return {field: result[i] for i, field in enumerate(data_fields)}
