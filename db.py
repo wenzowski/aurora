@@ -4,6 +4,7 @@ import postgis
 import json
 import decimal
 import numpy
+from shapely import wkt
 import os.path
 from co2 import (
     open_h5_reader,
@@ -121,7 +122,7 @@ def import_co2_data(db_connection, h5_path):
     return insert_rows(db_connection, file_name, fields_list)
 
 
-def query_level_2_data(db_connection, lat_lon_list, from_time, to_time):
+def query_level_2_data(db_connection, polygon, from_time, to_time):
     sql_select = '''
     SELECT id, file_id, time, point, data_fields
     FROM level_2_data
@@ -131,9 +132,6 @@ def query_level_2_data(db_connection, lat_lon_list, from_time, to_time):
     LIMIT 1;
     '''
     cursor = db_cursor(db_connection)
-    lon_lat = ','.join(
-        (str(float(lon)) + ' ' + str(float(lat)) for lat, lon in lat_lon_list)
-    )
-    lon_lat_str = 'POLYGON(('+ lon_lat +'))'
-    cursor.execute(sql_select, (lon_lat_str, from_time, to_time))
+    polygon_wkt = wkt.dumps(polygon)
+    cursor.execute(sql_select, (polygon_wkt, from_time, to_time))
     return cursor.fetchall()

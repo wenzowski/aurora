@@ -1,4 +1,5 @@
 import pytest
+from shapely import wkt
 from db import (
     SortedJson,
     check_is_dataset_imported,
@@ -184,13 +185,14 @@ def test_insert_rows(db_connection, extracted_co2_data_fields):
             )
         ]
 
+
 def test_insert_rows_with_no_data_fields(db_connection):
     filename = 'insert.no.rows.h5'
     fields_list = []
-    assert check_is_dataset_imported(db_connection, filename) == False
+    assert check_is_dataset_imported(db_connection, filename) is False
     inserted_ids = insert_rows(db_connection, filename, fields_list)
     assert inserted_ids == []
-    assert check_is_dataset_imported(db_connection, filename) == True
+    assert check_is_dataset_imported(db_connection, filename) is True
 
 
 def test_import_co2_data(db_connection):
@@ -202,16 +204,11 @@ def test_import_co2_data(db_connection):
 
 
 def test_query_level_2_data(db_connection):
-    lat_lon_list = [
-        [18.87, 21.61],
-        [18.87, 21.63],
-        [18.89, 21.63],
-        [18.89, 21.61],
-        [18.87, 21.61]
-    ]
+    polygon_wkt = 'POLYGON((21.61 18.87, 21.63 18.87, 21.63 18.89, 21.61 18.89, 21.61 18.87))'  # noqa
+    polygon = wkt.loads(polygon_wkt)
     from_time = '2016-06-01T00:03:00Z'
     to_time = '2016-06-01T00:04:00Z'
-    result = query_level_2_data(db_connection, lat_lon_list, from_time, to_time)[0]
+    result = query_level_2_data(db_connection, polygon, from_time, to_time)[0]
     assert isinstance(result[0], int)
     assert isinstance(result[1], int)
     assert result[2] == datetime.datetime.strptime(
