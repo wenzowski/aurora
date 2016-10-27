@@ -1,10 +1,41 @@
 # Aurora
 
-###Installation
+### Installation on Ubuntu 16.04
 ```bash
-apt-get install -y postgis
-apt-get install build-dep
+# apt-get update
+# apt-get install -y postgis libpq-dev make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils
+# apt-get install build-dep
+# adduser app
+# cd /home/app && su app
+$ git clone https://github.com/yyuu/pyenv.git ~/.pyenv
+$ echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
+$ echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+$ echo 'eval "$(pyenv init -)"' >> ~/.bashrc
+$ exec $SHELL
+$ git clone https://github.com/wenzowski/aurora.git ~/aurora && cd $_
+$ pyenv install `cat .python-version`
+$ pip install -r requirements.txt
 ```
+
+### Download Data from NASA
+
+1.  Register with [Earthdata](https://wiki.earthdata.nasa.gov/display/EL/How+To+Register+With+Earthdata+Login)
+2.  [Add GES DISC Authorization](http://disc.sci.gsfc.nasa.gov/registration/authorizing-gesdisc-data-access-in-earthdata_login)
+3.  Use your credentials to authenticate
+    ```bash
+    $ touch ~/.urs_cookies && chmod 600 ~/.urs_cookies
+    $ touch ~/.netrc && chmod 600 ~/.netrc
+    $ echo "machine urs.earthdata.nasa.gov login <uid> password <password>" >> ~/.netrc
+    ```
+    where <uid> is your user name and <password> is your URS password without the brackets
+    ```bash
+    $ cd ~/aurora/data
+    $ pv ~/sources/*.txt | xargs -n 1 -P 50 -I % wget --content-disposition --no-check-certificate --load-cookies ~/.urs_cookies --save-cookies ~/.urs_cookies --auth-no-challenge=on --keep-session-cookies --prefer-family=IPv4 -q %
+    $ ls *.hdf | xargs -I{} sh -c "h4toh5 {}"
+    $ rm *.hdf
+    $ hug -f server.py -c import_data # actually import the data
+    ```
+
 
 ## API Proposal
 
@@ -54,20 +85,16 @@ curl -X GET \
 	}
 }]
 ```
-
-## Getting Data
-
-```bash
-wget --load-cookies ~/.urs_cookies --save-cookies ~/.urs_cookies --auth-no-challenge=on --keep-session-cookies -r -c -nH -nd -np -A hdf "http://airsl2.gesdisc.eosdis.nasa.gov/data/Aqua_AIRS_Level2/AIRS2SPC.005/"
-ls *.hdf | xargs -I{} sh -c "h4toh5 {}"
-rm *.hdf
-hug -f server.py -c import_data # actually import the data
-```
-
 ## Testing
 
 ```bash
-pytest
+$ pytest
+```
+
+### Building list of AIRS data
+```bash
+$ wget --load-cookies ~/.urs_cookies --save-cookies ~/.urs_cookies --auth-no-challenge=on --keep-session-cookies -r -c -nH -nd -np -A hdf "http://airsl2.gesdisc.eosdis.nasa.gov/data/Aqua_AIRS_Level2/AIRS2SPC.005/" --spider -o wget.txt
+$ grep ^-- wget.txt | cut -d\  -f4 | grep \.hdf$ | uniq > ~/aurora/sources/AIRS2SPCv5.txt
 ```
 
 [lonlat]: http://www.macwright.org/lonlat/
