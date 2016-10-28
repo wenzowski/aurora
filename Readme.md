@@ -4,7 +4,6 @@
 ```bash
 # apt-get update
 # apt-get install -y postgis libpq-dev make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils
-# apt-get install build-dep
 # adduser app
 # cd /home/app && su app
 $ git clone https://github.com/yyuu/pyenv.git ~/.pyenv
