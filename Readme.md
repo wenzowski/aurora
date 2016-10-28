@@ -31,15 +31,16 @@ $ pip install -r requirements.txt
     ```bash
     $ cd ~/aurora/data
     $ pv ~/sources/*.txt | xargs -n 1 -P 50 -I % wget --content-disposition --no-check-certificate --load-cookies ~/.urs_cookies --save-cookies ~/.urs_cookies --auth-no-challenge=on --keep-session-cookies --prefer-family=IPv4 -q %
+    ```
 
 
 ### Convert h4 files to h5 files
 
-    ```bash
-    $ ls *.hdf | xargs -I{} sh -c "h4toh5 {}"
-    $ rm *.hdf
-    $ hug -f server.py -c import_data # actually import the data
-    ```
+```bash
+$ ls *.hdf | xargs -I{} sh -c "h4toh5 {}"
+$ rm *.hdf
+$ hug -f server.py -c import_data # actually import the data
+```
 
 
 ## API Proposal
